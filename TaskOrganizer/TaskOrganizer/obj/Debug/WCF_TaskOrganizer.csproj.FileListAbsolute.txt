@@ -1,0 +1,14 @@
+C:\Users\Vladyslav\source\repos\TaskOrganizer\TaskOrganizer\bin\Debug\TaskOrganizer.dll.config
+C:\Users\Vladyslav\source\repos\TaskOrganizer\TaskOrganizer\bin\Debug\TaskOrganizer.dll
+C:\Users\Vladyslav\source\repos\TaskOrganizer\TaskOrganizer\bin\Debug\TaskOrganizer.pdb
+C:\Users\Vladyslav\source\repos\TaskOrganizer\TaskOrganizer\obj\Debug\WCF_TaskOrganizer.csprojResolveAssemblyReference.cache
+C:\Users\Vladyslav\source\repos\TaskOrganizer\TaskOrganizer\obj\Debug\WCF_TaskOrganizer.csproj.CoreCompileInputs.cache
+C:\Users\Vladyslav\source\repos\TaskOrganizer\TaskOrganizer\obj\Debug\TaskOrganizer.dll
+C:\Users\Vladyslav\source\repos\TaskOrganizer\TaskOrganizer\obj\Debug\TaskOrganizer.pdb
+E:\GitHub\Task_Organizer\TaskOrganizer\TaskOrganizer\bin\Debug\TaskOrganizer.dll.config
+E:\GitHub\Task_Organizer\TaskOrganizer\TaskOrganizer\bin\Debug\TaskOrganizer.dll
+E:\GitHub\Task_Organizer\TaskOrganizer\TaskOrganizer\bin\Debug\TaskOrganizer.pdb
+E:\GitHub\Task_Organizer\TaskOrganizer\TaskOrganizer\obj\Debug\WCF_TaskOrganizer.csprojResolveAssemblyReference.cache
+E:\GitHub\Task_Organizer\TaskOrganizer\TaskOrganizer\obj\Debug\WCF_TaskOrganizer.csproj.CoreCompileInputs.cache
+E:\GitHub\Task_Organizer\TaskOrganizer\TaskOrganizer\obj\Debug\TaskOrganizer.dll
+E:\GitHub\Task_Organizer\TaskOrganizer\TaskOrganizer\obj\Debug\TaskOrganizer.pdb

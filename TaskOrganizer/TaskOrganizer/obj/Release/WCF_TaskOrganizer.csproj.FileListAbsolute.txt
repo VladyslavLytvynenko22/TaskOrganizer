@@ -1,0 +1,7 @@
+C:\Users\Vladyslav\source\repos\TaskOrganizer\TaskOrganizer\bin\Release\TaskOrganizer.dll.config
+C:\Users\Vladyslav\source\repos\TaskOrganizer\TaskOrganizer\bin\Release\TaskOrganizer.dll
+C:\Users\Vladyslav\source\repos\TaskOrganizer\TaskOrganizer\bin\Release\TaskOrganizer.pdb
+C:\Users\Vladyslav\source\repos\TaskOrganizer\TaskOrganizer\obj\Release\WCF_TaskOrganizer.csprojResolveAssemblyReference.cache
+C:\Users\Vladyslav\source\repos\TaskOrganizer\TaskOrganizer\obj\Release\WCF_TaskOrganizer.csproj.CoreCompileInputs.cache
+C:\Users\Vladyslav\source\repos\TaskOrganizer\TaskOrganizer\obj\Release\TaskOrganizer.dll
+C:\Users\Vladyslav\source\repos\TaskOrganizer\TaskOrganizer\obj\Release\TaskOrganizer.pdb

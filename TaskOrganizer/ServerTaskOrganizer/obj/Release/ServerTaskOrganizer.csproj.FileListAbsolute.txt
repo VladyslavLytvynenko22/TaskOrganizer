@@ -1,0 +1,13 @@
+C:\Users\Vladyslav\source\repos\TaskOrganizer\ServerTaskOrganizer\bin\Release\ServerTaskOrganizer.exe.config
+C:\Users\Vladyslav\source\repos\TaskOrganizer\ServerTaskOrganizer\bin\Release\ServerTaskOrganizer.exe
+C:\Users\Vladyslav\source\repos\TaskOrganizer\ServerTaskOrganizer\bin\Release\ServerTaskOrganizer.pdb
+C:\Users\Vladyslav\source\repos\TaskOrganizer\ServerTaskOrganizer\bin\Release\TaskOrganizer.dll
+C:\Users\Vladyslav\source\repos\TaskOrganizer\ServerTaskOrganizer\bin\Release\TaskOrganizer.pdb
+C:\Users\Vladyslav\source\repos\TaskOrganizer\ServerTaskOrganizer\bin\Release\TaskOrganizer.dll.config
+C:\Users\Vladyslav\source\repos\TaskOrganizer\ServerTaskOrganizer\obj\Release\ServerTaskOrganizer.csprojResolveAssemblyReference.cache
+C:\Users\Vladyslav\source\repos\TaskOrganizer\ServerTaskOrganizer\obj\Release\ServerTaskOrganizer.Form1.resources
+C:\Users\Vladyslav\source\repos\TaskOrganizer\ServerTaskOrganizer\obj\Release\ServerTaskOrganizer.Properties.Resources.resources
+C:\Users\Vladyslav\source\repos\TaskOrganizer\ServerTaskOrganizer\obj\Release\ServerTaskOrganizer.csproj.GenerateResource.Cache
+C:\Users\Vladyslav\source\repos\TaskOrganizer\ServerTaskOrganizer\obj\Release\ServerTaskOrganizer.csproj.CoreCompileInputs.cache
+C:\Users\Vladyslav\source\repos\TaskOrganizer\ServerTaskOrganizer\obj\Release\ServerTaskOrganizer.exe
+C:\Users\Vladyslav\source\repos\TaskOrganizer\ServerTaskOrganizer\obj\Release\ServerTaskOrganizer.pdb

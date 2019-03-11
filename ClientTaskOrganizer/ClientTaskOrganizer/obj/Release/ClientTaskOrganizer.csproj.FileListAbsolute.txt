@@ -1,0 +1,10 @@
+C:\Users\Vladyslav\source\repos\ClientTaskOrganizer\ClientTaskOrganizer\bin\Release\ClientTaskOrganizer.exe.config
+C:\Users\Vladyslav\source\repos\ClientTaskOrganizer\ClientTaskOrganizer\bin\Release\ClientTaskOrganizer.exe
+C:\Users\Vladyslav\source\repos\ClientTaskOrganizer\ClientTaskOrganizer\bin\Release\ClientTaskOrganizer.pdb
+C:\Users\Vladyslav\source\repos\ClientTaskOrganizer\ClientTaskOrganizer\obj\Release\ClientTaskOrganizer.Form_ClientTaskOrganizer.resources
+C:\Users\Vladyslav\source\repos\ClientTaskOrganizer\ClientTaskOrganizer\obj\Release\ClientTaskOrganizer.Properties.Resources.resources
+C:\Users\Vladyslav\source\repos\ClientTaskOrganizer\ClientTaskOrganizer\obj\Release\ClientTaskOrganizer.csproj.GenerateResource.Cache
+C:\Users\Vladyslav\source\repos\ClientTaskOrganizer\ClientTaskOrganizer\obj\Release\ClientTaskOrganizer.csproj.CoreCompileInputs.cache
+C:\Users\Vladyslav\source\repos\ClientTaskOrganizer\ClientTaskOrganizer\obj\Release\ClientTaskOrganizer.exe
+C:\Users\Vladyslav\source\repos\ClientTaskOrganizer\ClientTaskOrganizer\obj\Release\ClientTaskOrganizer.pdb
+C:\Users\Vladyslav\source\repos\ClientTaskOrganizer\ClientTaskOrganizer\obj\Release\ClientTaskOrganizer.csprojResolveAssemblyReference.cache

@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="WCF_TaskOrganizer" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://192.168.0.110:1000/?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://192.168.0.110:1000/?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://192.168.0.110:1000/?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WCF_TaskOrganizer" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ITaskOrganizer_SelectAllFromDb_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAllFromDb" />
+  </wsdl:message>
+  <wsdl:message name="ITaskOrganizer_SelectAllFromDb_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAllFromDbResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITaskOrganizer_ConnectToDb_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConnectToDb" />
+  </wsdl:message>
+  <wsdl:message name="ITaskOrganizer_ConnectToDb_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConnectToDbResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITaskOrganizer_DisconnectFromDb_InputMessage">
+    <wsdl:part name="parameters" element="tns:DisconnectFromDb" />
+  </wsdl:message>
+  <wsdl:message name="ITaskOrganizer_DisconnectFromDb_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DisconnectFromDbResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITaskOrganizer_DeleteRowInDb_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteRowInDb" />
+  </wsdl:message>
+  <wsdl:message name="ITaskOrganizer_DeleteRowInDb_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteRowInDbResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITaskOrganizer_AddRowsToDb_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddRowsToDb" />
+  </wsdl:message>
+  <wsdl:message name="ITaskOrganizer_AddRowsToDb_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddRowsToDbResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITaskOrganizer_SaveChangesToDb_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveChangesToDb" />
+  </wsdl:message>
+  <wsdl:message name="ITaskOrganizer_SaveChangesToDb_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveChangesToDbResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ITaskOrganizer">
+    <wsdl:operation name="SelectAllFromDb">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITaskOrganizer/SelectAllFromDb" message="tns:ITaskOrganizer_SelectAllFromDb_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITaskOrganizer/SelectAllFromDbResponse" message="tns:ITaskOrganizer_SelectAllFromDb_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConnectToDb">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITaskOrganizer/ConnectToDb" message="tns:ITaskOrganizer_ConnectToDb_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITaskOrganizer/ConnectToDbResponse" message="tns:ITaskOrganizer_ConnectToDb_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DisconnectFromDb">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITaskOrganizer/DisconnectFromDb" message="tns:ITaskOrganizer_DisconnectFromDb_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITaskOrganizer/DisconnectFromDbResponse" message="tns:ITaskOrganizer_DisconnectFromDb_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteRowInDb">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITaskOrganizer/DeleteRowInDb" message="tns:ITaskOrganizer_DeleteRowInDb_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITaskOrganizer/DeleteRowInDbResponse" message="tns:ITaskOrganizer_DeleteRowInDb_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddRowsToDb">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITaskOrganizer/AddRowsToDb" message="tns:ITaskOrganizer_AddRowsToDb_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITaskOrganizer/AddRowsToDbResponse" message="tns:ITaskOrganizer_AddRowsToDb_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveChangesToDb">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITaskOrganizer/SaveChangesToDb" message="tns:ITaskOrganizer_SaveChangesToDb_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITaskOrganizer/SaveChangesToDbResponse" message="tns:ITaskOrganizer_SaveChangesToDb_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_ITaskOrganizer" type="tns:ITaskOrganizer">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SelectAllFromDb">
+      <soap:operation soapAction="http://tempuri.org/ITaskOrganizer/SelectAllFromDb" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConnectToDb">
+      <soap:operation soapAction="http://tempuri.org/ITaskOrganizer/ConnectToDb" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DisconnectFromDb">
+      <soap:operation soapAction="http://tempuri.org/ITaskOrganizer/DisconnectFromDb" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteRowInDb">
+      <soap:operation soapAction="http://tempuri.org/ITaskOrganizer/DeleteRowInDb" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddRowsToDb">
+      <soap:operation soapAction="http://tempuri.org/ITaskOrganizer/AddRowsToDb" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveChangesToDb">
+      <soap:operation soapAction="http://tempuri.org/ITaskOrganizer/SaveChangesToDb" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WCF_TaskOrganizer">
+    <wsdl:port name="BasicHttpBinding_ITaskOrganizer" binding="tns:BasicHttpBinding_ITaskOrganizer">
+      <soap:address location="http://192.168.0.110:1000/WCF_TaskOrganizer" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
