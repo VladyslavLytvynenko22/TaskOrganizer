@@ -24,3 +24,16 @@ E:\GitHub\Task_Organizer\TaskOrganizer\ServerTaskOrganizer\obj\Debug\ServerTaskO
 E:\GitHub\Task_Organizer\TaskOrganizer\ServerTaskOrganizer\obj\Debug\ServerTaskOrganizer.csproj.CoreCompileInputs.cache
 E:\GitHub\Task_Organizer\TaskOrganizer\ServerTaskOrganizer\obj\Debug\ServerTaskOrganizer.exe
 E:\GitHub\Task_Organizer\TaskOrganizer\ServerTaskOrganizer\obj\Debug\ServerTaskOrganizer.pdb
+E:\GitHub\TaskOrganizer\TaskOrganizer\ServerTaskOrganizer\bin\Debug\ServerTaskOrganizer.exe.config
+E:\GitHub\TaskOrganizer\TaskOrganizer\ServerTaskOrganizer\bin\Debug\ServerTaskOrganizer.exe
+E:\GitHub\TaskOrganizer\TaskOrganizer\ServerTaskOrganizer\bin\Debug\ServerTaskOrganizer.pdb
+E:\GitHub\TaskOrganizer\TaskOrganizer\ServerTaskOrganizer\bin\Debug\TaskOrganizer.dll
+E:\GitHub\TaskOrganizer\TaskOrganizer\ServerTaskOrganizer\bin\Debug\TaskOrganizer.pdb
+E:\GitHub\TaskOrganizer\TaskOrganizer\ServerTaskOrganizer\bin\Debug\TaskOrganizer.dll.config
+E:\GitHub\TaskOrganizer\TaskOrganizer\ServerTaskOrganizer\obj\Debug\ServerTaskOrganizer.csprojResolveAssemblyReference.cache
+E:\GitHub\TaskOrganizer\TaskOrganizer\ServerTaskOrganizer\obj\Debug\ServerTaskOrganizer.Form1.resources
+E:\GitHub\TaskOrganizer\TaskOrganizer\ServerTaskOrganizer\obj\Debug\ServerTaskOrganizer.Properties.Resources.resources
+E:\GitHub\TaskOrganizer\TaskOrganizer\ServerTaskOrganizer\obj\Debug\ServerTaskOrganizer.csproj.GenerateResource.Cache
+E:\GitHub\TaskOrganizer\TaskOrganizer\ServerTaskOrganizer\obj\Debug\ServerTaskOrganizer.csproj.CoreCompileInputs.cache
+E:\GitHub\TaskOrganizer\TaskOrganizer\ServerTaskOrganizer\obj\Debug\ServerTaskOrganizer.exe
+E:\GitHub\TaskOrganizer\TaskOrganizer\ServerTaskOrganizer\obj\Debug\ServerTaskOrganizer.pdb

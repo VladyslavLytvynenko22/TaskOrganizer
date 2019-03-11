@@ -3,7 +3,10 @@
   <xs:import schemaLocation="http://192.168.0.110:1000/?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WCF_TaskOrganizer" />
   <xs:element name="SelectAllFromDb">
     <xs:complexType>
-      <xs:sequence />
+      <xs:sequence>
+        <xs:element minOccurs="0" name="nameDataBases" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="nameTable" nillable="true" type="xs:string" />
+      </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="SelectAllFromDbResponse">
@@ -15,7 +18,10 @@
   </xs:element>
   <xs:element name="ConnectToDb">
     <xs:complexType>
-      <xs:sequence />
+      <xs:sequence>
+        <xs:element minOccurs="0" name="nameDataBases" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="nameTable" nillable="true" type="xs:string" />
+      </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="ConnectToDbResponse">
@@ -39,6 +45,8 @@
     <xs:complexType>
       <xs:sequence>
         <xs:element minOccurs="0" name="Id" type="xs:int" />
+        <xs:element minOccurs="0" name="nameDataBases" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="nameTable" nillable="true" type="xs:string" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -51,6 +59,8 @@
     <xs:complexType>
       <xs:sequence>
         <xs:element minOccurs="0" name="command" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="nameDataBases" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="nameTable" nillable="true" type="xs:string" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -63,6 +73,8 @@
     <xs:complexType>
       <xs:sequence>
         <xs:element minOccurs="0" name="command" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="nameDataBases" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="nameTable" nillable="true" type="xs:string" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

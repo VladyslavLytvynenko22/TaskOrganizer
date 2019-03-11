@@ -159,16 +159,16 @@ namespace ClientTaskOrganizer.RefServiceTaskOrganizer {
     public interface ITaskOrganizer {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITaskOrganizer/SelectAllFromDb", ReplyAction="http://tempuri.org/ITaskOrganizer/SelectAllFromDbResponse")]
-        ClientTaskOrganizer.RefServiceTaskOrganizer.Task[] SelectAllFromDb();
+        ClientTaskOrganizer.RefServiceTaskOrganizer.Task[] SelectAllFromDb(string nameDataBases, string nameTable);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITaskOrganizer/SelectAllFromDb", ReplyAction="http://tempuri.org/ITaskOrganizer/SelectAllFromDbResponse")]
-        System.Threading.Tasks.Task<ClientTaskOrganizer.RefServiceTaskOrganizer.Task[]> SelectAllFromDbAsync();
+        System.Threading.Tasks.Task<ClientTaskOrganizer.RefServiceTaskOrganizer.Task[]> SelectAllFromDbAsync(string nameDataBases, string nameTable);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITaskOrganizer/ConnectToDb", ReplyAction="http://tempuri.org/ITaskOrganizer/ConnectToDbResponse")]
-        bool ConnectToDb();
+        bool ConnectToDb(string nameDataBases, string nameTable);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITaskOrganizer/ConnectToDb", ReplyAction="http://tempuri.org/ITaskOrganizer/ConnectToDbResponse")]
-        System.Threading.Tasks.Task<bool> ConnectToDbAsync();
+        System.Threading.Tasks.Task<bool> ConnectToDbAsync(string nameDataBases, string nameTable);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITaskOrganizer/DisconnectFromDb", ReplyAction="http://tempuri.org/ITaskOrganizer/DisconnectFromDbResponse")]
         void DisconnectFromDb();
@@ -177,22 +177,22 @@ namespace ClientTaskOrganizer.RefServiceTaskOrganizer {
         System.Threading.Tasks.Task DisconnectFromDbAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITaskOrganizer/DeleteRowInDb", ReplyAction="http://tempuri.org/ITaskOrganizer/DeleteRowInDbResponse")]
-        void DeleteRowInDb(int Id);
+        void DeleteRowInDb(int Id, string nameDataBases, string nameTable);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITaskOrganizer/DeleteRowInDb", ReplyAction="http://tempuri.org/ITaskOrganizer/DeleteRowInDbResponse")]
-        System.Threading.Tasks.Task DeleteRowInDbAsync(int Id);
+        System.Threading.Tasks.Task DeleteRowInDbAsync(int Id, string nameDataBases, string nameTable);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITaskOrganizer/AddRowsToDb", ReplyAction="http://tempuri.org/ITaskOrganizer/AddRowsToDbResponse")]
-        void AddRowsToDb(string command);
+        void AddRowsToDb(string command, string nameDataBases, string nameTable);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITaskOrganizer/AddRowsToDb", ReplyAction="http://tempuri.org/ITaskOrganizer/AddRowsToDbResponse")]
-        System.Threading.Tasks.Task AddRowsToDbAsync(string command);
+        System.Threading.Tasks.Task AddRowsToDbAsync(string command, string nameDataBases, string nameTable);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITaskOrganizer/SaveChangesToDb", ReplyAction="http://tempuri.org/ITaskOrganizer/SaveChangesToDbResponse")]
-        void SaveChangesToDb(string command);
+        void SaveChangesToDb(string command, string nameDataBases, string nameTable);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITaskOrganizer/SaveChangesToDb", ReplyAction="http://tempuri.org/ITaskOrganizer/SaveChangesToDbResponse")]
-        System.Threading.Tasks.Task SaveChangesToDbAsync(string command);
+        System.Threading.Tasks.Task SaveChangesToDbAsync(string command, string nameDataBases, string nameTable);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -222,20 +222,20 @@ namespace ClientTaskOrganizer.RefServiceTaskOrganizer {
                 base(binding, remoteAddress) {
         }
         
-        public ClientTaskOrganizer.RefServiceTaskOrganizer.Task[] SelectAllFromDb() {
-            return base.Channel.SelectAllFromDb();
+        public ClientTaskOrganizer.RefServiceTaskOrganizer.Task[] SelectAllFromDb(string nameDataBases, string nameTable) {
+            return base.Channel.SelectAllFromDb(nameDataBases, nameTable);
         }
         
-        public System.Threading.Tasks.Task<ClientTaskOrganizer.RefServiceTaskOrganizer.Task[]> SelectAllFromDbAsync() {
-            return base.Channel.SelectAllFromDbAsync();
+        public System.Threading.Tasks.Task<ClientTaskOrganizer.RefServiceTaskOrganizer.Task[]> SelectAllFromDbAsync(string nameDataBases, string nameTable) {
+            return base.Channel.SelectAllFromDbAsync(nameDataBases, nameTable);
         }
         
-        public bool ConnectToDb() {
-            return base.Channel.ConnectToDb();
+        public bool ConnectToDb(string nameDataBases, string nameTable) {
+            return base.Channel.ConnectToDb(nameDataBases, nameTable);
         }
         
-        public System.Threading.Tasks.Task<bool> ConnectToDbAsync() {
-            return base.Channel.ConnectToDbAsync();
+        public System.Threading.Tasks.Task<bool> ConnectToDbAsync(string nameDataBases, string nameTable) {
+            return base.Channel.ConnectToDbAsync(nameDataBases, nameTable);
         }
         
         public void DisconnectFromDb() {
@@ -246,28 +246,28 @@ namespace ClientTaskOrganizer.RefServiceTaskOrganizer {
             return base.Channel.DisconnectFromDbAsync();
         }
         
-        public void DeleteRowInDb(int Id) {
-            base.Channel.DeleteRowInDb(Id);
+        public void DeleteRowInDb(int Id, string nameDataBases, string nameTable) {
+            base.Channel.DeleteRowInDb(Id, nameDataBases, nameTable);
         }
         
-        public System.Threading.Tasks.Task DeleteRowInDbAsync(int Id) {
-            return base.Channel.DeleteRowInDbAsync(Id);
+        public System.Threading.Tasks.Task DeleteRowInDbAsync(int Id, string nameDataBases, string nameTable) {
+            return base.Channel.DeleteRowInDbAsync(Id, nameDataBases, nameTable);
         }
         
-        public void AddRowsToDb(string command) {
-            base.Channel.AddRowsToDb(command);
+        public void AddRowsToDb(string command, string nameDataBases, string nameTable) {
+            base.Channel.AddRowsToDb(command, nameDataBases, nameTable);
         }
         
-        public System.Threading.Tasks.Task AddRowsToDbAsync(string command) {
-            return base.Channel.AddRowsToDbAsync(command);
+        public System.Threading.Tasks.Task AddRowsToDbAsync(string command, string nameDataBases, string nameTable) {
+            return base.Channel.AddRowsToDbAsync(command, nameDataBases, nameTable);
         }
         
-        public void SaveChangesToDb(string command) {
-            base.Channel.SaveChangesToDb(command);
+        public void SaveChangesToDb(string command, string nameDataBases, string nameTable) {
+            base.Channel.SaveChangesToDb(command, nameDataBases, nameTable);
         }
         
-        public System.Threading.Tasks.Task SaveChangesToDbAsync(string command) {
-            return base.Channel.SaveChangesToDbAsync(command);
+        public System.Threading.Tasks.Task SaveChangesToDbAsync(string command, string nameDataBases, string nameTable) {
+            return base.Channel.SaveChangesToDbAsync(command, nameDataBases, nameTable);
         }
     }
 }

@@ -22,3 +22,15 @@ E:\GitHub\Task_Organizer\ClientTaskOrganizer\ClientTaskOrganizer\obj\Debug\Clien
 E:\GitHub\Task_Organizer\ClientTaskOrganizer\ClientTaskOrganizer\obj\Debug\ClientTaskOrganizer.csproj.CoreCompileInputs.cache
 E:\GitHub\Task_Organizer\ClientTaskOrganizer\ClientTaskOrganizer\obj\Debug\ClientTaskOrganizer.exe
 E:\GitHub\Task_Organizer\ClientTaskOrganizer\ClientTaskOrganizer\obj\Debug\ClientTaskOrganizer.pdb
+E:\GitHub\TaskOrganizer\ClientTaskOrganizer\ClientTaskOrganizer\bin\Debug\ClientTaskOrganizer.exe.config
+E:\GitHub\TaskOrganizer\ClientTaskOrganizer\ClientTaskOrganizer\bin\Debug\ClientTaskOrganizer.exe
+E:\GitHub\TaskOrganizer\ClientTaskOrganizer\ClientTaskOrganizer\bin\Debug\ClientTaskOrganizer.pdb
+E:\GitHub\TaskOrganizer\ClientTaskOrganizer\ClientTaskOrganizer\obj\Debug\ClientTaskOrganizer.csprojResolveAssemblyReference.cache
+E:\GitHub\TaskOrganizer\ClientTaskOrganizer\ClientTaskOrganizer\obj\Debug\ClientTaskOrganizer.AddRowForm.resources
+E:\GitHub\TaskOrganizer\ClientTaskOrganizer\ClientTaskOrganizer\obj\Debug\ClientTaskOrganizer.ConnectToServerForm.resources
+E:\GitHub\TaskOrganizer\ClientTaskOrganizer\ClientTaskOrganizer\obj\Debug\ClientTaskOrganizer.Form_ClientTaskOrganizer.resources
+E:\GitHub\TaskOrganizer\ClientTaskOrganizer\ClientTaskOrganizer\obj\Debug\ClientTaskOrganizer.Properties.Resources.resources
+E:\GitHub\TaskOrganizer\ClientTaskOrganizer\ClientTaskOrganizer\obj\Debug\ClientTaskOrganizer.csproj.GenerateResource.Cache
+E:\GitHub\TaskOrganizer\ClientTaskOrganizer\ClientTaskOrganizer\obj\Debug\ClientTaskOrganizer.csproj.CoreCompileInputs.cache
+E:\GitHub\TaskOrganizer\ClientTaskOrganizer\ClientTaskOrganizer\obj\Debug\ClientTaskOrganizer.exe
+E:\GitHub\TaskOrganizer\ClientTaskOrganizer\ClientTaskOrganizer\obj\Debug\ClientTaskOrganizer.pdb

@@ -14,14 +14,16 @@ namespace ClientTaskOrganizer
 {
     public partial class Form_ClientTaskOrganizer : Form
     {
-        public TaskOrganizerClient client;
-        
+        private TaskOrganizerClient client;
+        private string nameDataBases;
+        private string nameTable;
+
         public Form_ClientTaskOrganizer()
         {
             InitializeComponent();
         }
 
-        public void RefreshdataGridView()
+        public void RefreshdataGridView()//оновити табличку з бази даних
         {
             try
             {
@@ -29,13 +31,13 @@ namespace ClientTaskOrganizer
                 SelectAllToDataGridView();
             }
             catch (Exception ex){ MessageBox.Show(ex.ToString());}
-        }//оновити табличку з бази даних
+        }
 
-        public void SelectAllToDataGridView()
+        public void SelectAllToDataGridView()//вибрати всі значення з бази даних
         {
             try
             {
-                RefServiceTaskOrganizer.Task[] task = client.SelectAllFromDb();//отримуэмо дані з бази даних
+                RefServiceTaskOrganizer.Task[] task = client.SelectAllFromDb(nameDataBases, nameTable);//отримуэмо дані з бази даних
                 for (int i = 0; i < task.Length; i++)
                 {
                     //ID вставляємо в схований стовбец
@@ -43,9 +45,9 @@ namespace ClientTaskOrganizer
                 }
             }
             catch (Exception ex){MessageBox.Show(ex.ToString());}
-        }//вибрати всі значення з бази даних
+        }
 
-        public void DeleteRowInDb(DataGridViewCellEventArgs e)
+        public void DeleteRowInDb(DataGridViewCellEventArgs e)//видалити рядок за індексом
         {
             try
             {
@@ -53,12 +55,12 @@ namespace ClientTaskOrganizer
                 {
                     //надсилаємо ID який треба видалити
                     //ID беремо з прихованого стовбця
-                    client.DeleteRowInDb(Convert.ToInt32(DataGridView1.Rows[DataGridView1.CurrentCell.RowIndex].Cells["Id"].Value));
+                    client.DeleteRowInDb(Convert.ToInt32(DataGridView1.Rows[DataGridView1.CurrentCell.RowIndex].Cells["Id"].Value), nameDataBases, nameTable);
                     RefreshdataGridView();
                 }
             }
             catch (Exception ex){MessageBox.Show(ex.ToString());}
-        }//видалити рядок за індексом
+        }
         
         private void Form_ClientTaskOrganizer_Load(object sender, EventArgs e)
         {
@@ -72,12 +74,18 @@ namespace ClientTaskOrganizer
                     //якщо на connectToServerForm нажали підключитися
                     connectToServerForm.butConnect.Click += (senderConnectToServer, eConnectToServer) =>
                     {
-                        if (connectToServerForm.txtBxIP.Text != null && connectToServerForm.txtBxPort.Text != null)
+                        if (connectToServerForm.txtBxIP.Text != null && connectToServerForm.txtBxPort.Text != null && connectToServerForm.txtBoxNameDataBases != null && connectToServerForm.txtBoxNameTableDataBases != null)
                         {
-                            client = new TaskOrganizerClient("BasicHttpBinding_ITaskOrganizer");
-                            EndpointAddress endpointAddress = new EndpointAddress($"http://{connectToServerForm.txtBxIP.Text}:{connectToServerForm.txtBxPort.Text}//WCF_TaskOrganizer");
-                            client.Endpoint.Address = endpointAddress;
-                            client.SelectAllFromDb();//перевіримо чи можна вибрати дані
+                            {
+                                client = new TaskOrganizerClient("BasicHttpBinding_ITaskOrganizer");
+                                EndpointAddress endpointAddress = new EndpointAddress($"http://{connectToServerForm.txtBxIP.Text}:{connectToServerForm.txtBxPort.Text}//WCF_TaskOrganizer");
+                                client.Endpoint.Address = endpointAddress;
+                            }
+                            {
+                                nameDataBases = connectToServerForm.txtBoxNameDataBases.Text;
+                                nameTable = connectToServerForm.txtBoxNameTableDataBases.Text;
+                            }
+                            client.SelectAllFromDb(nameDataBases, nameTable);//перевіримо чи можна вибрати дані
                             SelectAllToDataGridView();//вибираємо всі дані
                             connectToServerForm.Close();//закриваємо форму для підключення
                             isConnect = true;//виходимо з циклу
@@ -128,7 +136,7 @@ namespace ClientTaskOrganizer
                          {
                              //створимо команду для запису до таблиці
                              string command = $"\'{description}\', \'{priority}\', 0, {year}, {month}, {day}";
-                             client.AddRowsToDb(command);//віддали команду сервісу
+                             client.AddRowsToDb(command, nameDataBases, nameTable);//віддали команду сервісу
                              addRowForm.Close();//форма для додавання рядка вже не потрібна
                              RefreshdataGridView();
                          }
@@ -156,7 +164,7 @@ namespace ClientTaskOrganizer
                     task.Month = Convert.ToInt32(DataGridView1.Rows[i].Cells["Month"].Value);
                     task.Day = Convert.ToInt32(DataGridView1.Rows[i].Cells["Day"].Value);
                     //беремо всі рядки попорядку і оновлюємо таблицю в БД
-                    client.SaveChangesToDb($"UPDATE dbo.TableOrganizer SET Description = \'{task.Description}\', Priority = \'{task.Priority}\', Status = \'{task.Status}\', Year = {task.Year}, Month = {task.Month}, Day = {task.Day} WHERE ID = {task.Id};");
+                    client.SaveChangesToDb($"UPDATE dbo.TableOrganizer SET Description = \'{task.Description}\', Priority = \'{task.Priority}\', Status = \'{task.Status}\', Year = {task.Year}, Month = {task.Month}, Day = {task.Day} WHERE ID = {task.Id};", nameDataBases, nameTable);
                 }
                 RefreshdataGridView();
             }

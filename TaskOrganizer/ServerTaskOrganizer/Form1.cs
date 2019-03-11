@@ -66,7 +66,7 @@ namespace ServerTaskOrganizer
             catch (Exception exc) { Console.WriteLine(exc.Message); }
         }
 
-        private void ClosePort()
+        private void ClosePort()//видаляємо правило для порта
         {
             try
             {
@@ -77,7 +77,7 @@ namespace ServerTaskOrganizer
                 var process = Process.Start(info);//видалимо правило в брандмауері для нашого порта (для безпеки)
             }
             catch (Exception exc) { Console.WriteLine(exc.Message); }
-        }//видаляємо правило для порта
+        }
 
         public void GetLocalIPAddress()// шукаємо вільний порт і IP адрес
         {
@@ -128,45 +128,12 @@ namespace ServerTaskOrganizer
                 this.TextStatus.Text += "Host stoped...\n";
             }
             catch (Exception ex){MessageBox.Show(ex.ToString());}
-        }//зупинення хосту
-
-       /* private void CreateFile()
-        {
-            try
-            {
-                FileStream fstream = new FileStream(@"C:\SomeDir\noname\note.txt", FileMode.Create);
-
-                byte[] array = System.Text.Encoding.Default.GetBytes("text");
-                fstream.Write(array, 0, array.Length);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error create file config for database");
-
-            }
         }
-
-        private void OpenFile()
+               
+        /*private void StartConnectToDb()//підключення до бази данних
         {
             try
             {
-                FileStream fstream = File.OpenRead(@"C:\SomeDir\noname\note.txt");
-
-                byte[] array = new byte[fstream.Length];
-                fstream.Read(array, 0, array.Length);
-                string textFromFile = System.Text.Encoding.Default.GetString(array);
-                
-            }
-            catch (Exception ex)
-            {
-                CreateFile();
-            }
-        }*/
-        private void StartConnectToDb()
-        {
-            try
-            {
-                //OpenFile();
                 task = new WCF_TaskOrganizer.WCF_TaskOrganizer();
                 if (!task.ConnectToDb()) Application.Exit();
                 this.TextStatus.Text += "Database connected...\n";
@@ -176,24 +143,22 @@ namespace ServerTaskOrganizer
                 MessageBox.Show(ex.ToString());
                 Application.Exit();
             }
-        }//підключення до бази данних
+        }
 
-        private void StopConnectToDb()
+        private void StopConnectToDb()//відключення від бази данних
         {
             task.DisconnectFromDb();
-        }//відключення від бази данних
+        }*/
 
         private void Form1_Load(object sender, EventArgs e)
         {
             GetLocalIPAddress();//беремо IP та вільний порт
-            StartHost();//запускаємо 
-            StartConnectToDb();
+            StartHost();//запускаємо
         }
         
         private void butStopHost_Click(object sender, EventArgs e)
         {
             ClosePort();
-            StopConnectToDb();
             StopHost();
         }
 
@@ -201,7 +166,6 @@ namespace ServerTaskOrganizer
         {
             GetLocalIPAddress();
             StartHost();
-            StartConnectToDb();
         }
     }
 }

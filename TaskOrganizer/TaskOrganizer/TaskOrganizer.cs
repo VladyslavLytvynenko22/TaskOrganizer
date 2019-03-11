@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using System.Net;
 //using System.Linq;
 //using System.Runtime.Serialization;
 //using System.ServiceModel;
@@ -15,17 +16,17 @@ namespace WCF_TaskOrganizer
         SqlConnection conn;
         SqlCommand comm;
         
-
-        public bool ConnectToDb()
+        public bool ConnectToDb(string nameDataBases, string nameTable)//підключення до бази данних
         {
             try
             {
                 //connStringBuilder.DataSource = $"G0LDING\\SQLEXPRESS";
                 //connStringBuilder.InitialCatalog = "DbOrganizer";
+                String hostName = Dns.GetHostName();
                 SqlConnectionStringBuilder connStringBuilder;
                 connStringBuilder = new SqlConnectionStringBuilder();//в задумах зробити налаштування до підключення БД в інтерфейсі
-                connStringBuilder.DataSource = "G0LDING\\SQLEXPRESS";//тут міняємо назву компа і назву сервера SQL
-                connStringBuilder.InitialCatalog = "DbOrganizer";//тут назва таблички в БД
+                connStringBuilder.DataSource = $"{hostName}\\{nameDataBases}";//тут міняємо назву компа і назву сервера SQL
+                connStringBuilder.InitialCatalog = nameTable;//тут назва таблички в БД
                 connStringBuilder.Encrypt = true;
                 connStringBuilder.TrustServerCertificate = true;
                 connStringBuilder.ConnectTimeout = 30;
@@ -40,18 +41,18 @@ namespace WCF_TaskOrganizer
             }
             catch (Exception ex){MessageBox.Show(ex.ToString());}
             return false;
-        }//підключення до бази данних
+        }
 
-        public void DisconnectFromDb()
+        public void DisconnectFromDb()//відключення від бази данних
         {
             conn.Close();
-        }//відключення від бази данних
+        }
         
-        public List<Task> SelectAllFromDb()
+        public List<Task> SelectAllFromDb(string nameDataBases, string nameTable)//показати все що є в базі данних
         {
             List<Task> taskL = new List<Task>();
             SqlDataReader reader = null;
-            ConnectToDb();
+            ConnectToDb(nameDataBases, nameTable);
             try
             {
                 comm.CommandText = "SELECT * FROM dbo.TableOrganizer ORDER BY 'Year', 'Month', 'Day';";
@@ -66,11 +67,11 @@ namespace WCF_TaskOrganizer
             }
             catch (Exception ex) { MessageBox.Show(ex.ToString()); }
             return taskL;
-        }//показати все що є в базі данних
+        }
 
-        public void DeleteRowInDb(int Id)
+        public void DeleteRowInDb(int Id, string nameDataBases, string nameTable)
         {
-            ConnectToDb();
+            ConnectToDb(nameDataBases, nameTable);
             try
             {
                 comm.CommandText = $"DELETE FROM dbo.TableOrganizer WHERE Id = {Id};";
@@ -80,9 +81,9 @@ namespace WCF_TaskOrganizer
             catch (Exception ex) { MessageBox.Show(ex.ToString()); }
         }
 
-        public void AddRowsToDb(string command)
+        public void AddRowsToDb(string command, string nameDataBases, string nameTable)
         {
-            ConnectToDb();
+            ConnectToDb(nameDataBases, nameTable);
             try
             {
                 comm.CommandText = $"INSERT INTO dbo.TableOrganizer VALUES ({command});";
@@ -92,9 +93,9 @@ namespace WCF_TaskOrganizer
             catch (Exception ex) { MessageBox.Show(ex.ToString()); }
         }
 
-        public void SaveChangesToDb(string command)
+        public void SaveChangesToDb(string command, string nameDataBases, string nameTable)
         {
-            ConnectToDb();
+            ConnectToDb(nameDataBases, nameTable);
             try
             {
                 comm.CommandText = command;
