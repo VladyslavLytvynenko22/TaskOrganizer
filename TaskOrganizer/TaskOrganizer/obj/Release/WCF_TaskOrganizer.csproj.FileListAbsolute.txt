@@ -5,3 +5,10 @@ C:\Users\Vladyslav\source\repos\TaskOrganizer\TaskOrganizer\obj\Release\WCF_Task
 C:\Users\Vladyslav\source\repos\TaskOrganizer\TaskOrganizer\obj\Release\WCF_TaskOrganizer.csproj.CoreCompileInputs.cache
 C:\Users\Vladyslav\source\repos\TaskOrganizer\TaskOrganizer\obj\Release\TaskOrganizer.dll
 C:\Users\Vladyslav\source\repos\TaskOrganizer\TaskOrganizer\obj\Release\TaskOrganizer.pdb
+E:\GitHub\TaskOrganizer\TaskOrganizer\TaskOrganizer\bin\Release\TaskOrganizer.dll.config
+E:\GitHub\TaskOrganizer\TaskOrganizer\TaskOrganizer\bin\Release\TaskOrganizer.dll
+E:\GitHub\TaskOrganizer\TaskOrganizer\TaskOrganizer\bin\Release\TaskOrganizer.pdb
+E:\GitHub\TaskOrganizer\TaskOrganizer\TaskOrganizer\obj\Release\WCF_TaskOrganizer.csprojResolveAssemblyReference.cache
+E:\GitHub\TaskOrganizer\TaskOrganizer\TaskOrganizer\obj\Release\WCF_TaskOrganizer.csproj.CoreCompileInputs.cache
+E:\GitHub\TaskOrganizer\TaskOrganizer\TaskOrganizer\obj\Release\TaskOrganizer.dll
+E:\GitHub\TaskOrganizer\TaskOrganizer\TaskOrganizer\obj\Release\TaskOrganizer.pdb
