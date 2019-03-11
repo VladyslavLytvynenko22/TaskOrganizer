@@ -20,8 +20,6 @@ namespace WCF_TaskOrganizer
         {
             try
             {
-                //connStringBuilder.DataSource = $"G0LDING\\SQLEXPRESS";
-                //connStringBuilder.InitialCatalog = "DbOrganizer";
                 String hostName = Dns.GetHostName();
                 SqlConnectionStringBuilder connStringBuilder;
                 connStringBuilder = new SqlConnectionStringBuilder();//в задумах зробити налаштування до підключення БД в інтерфейсі
