@@ -64,6 +64,8 @@
     <Compile Include="ConnectToServerForm.Designer.cs">
       <DependentUpon>ConnectToServerForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="WorkWithDatabase.cs" />
+    <Compile Include="WorkWithDataGridView.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>

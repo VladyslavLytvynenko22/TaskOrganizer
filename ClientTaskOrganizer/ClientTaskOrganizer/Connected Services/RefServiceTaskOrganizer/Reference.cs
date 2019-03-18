@@ -189,10 +189,10 @@ namespace ClientTaskOrganizer.RefServiceTaskOrganizer {
         System.Threading.Tasks.Task AddRowsToDbAsync(string command, string nameDataBases, string nameTable);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITaskOrganizer/SaveChangesToDb", ReplyAction="http://tempuri.org/ITaskOrganizer/SaveChangesToDbResponse")]
-        void SaveChangesToDb(string command, string nameDataBases, string nameTable);
+        void SaveChangesToDb(ClientTaskOrganizer.RefServiceTaskOrganizer.Task[] task, string nameDataBases, string nameTable);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITaskOrganizer/SaveChangesToDb", ReplyAction="http://tempuri.org/ITaskOrganizer/SaveChangesToDbResponse")]
-        System.Threading.Tasks.Task SaveChangesToDbAsync(string command, string nameDataBases, string nameTable);
+        System.Threading.Tasks.Task SaveChangesToDbAsync(ClientTaskOrganizer.RefServiceTaskOrganizer.Task[] task, string nameDataBases, string nameTable);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -262,12 +262,12 @@ namespace ClientTaskOrganizer.RefServiceTaskOrganizer {
             return base.Channel.AddRowsToDbAsync(command, nameDataBases, nameTable);
         }
         
-        public void SaveChangesToDb(string command, string nameDataBases, string nameTable) {
-            base.Channel.SaveChangesToDb(command, nameDataBases, nameTable);
+        public void SaveChangesToDb(ClientTaskOrganizer.RefServiceTaskOrganizer.Task[] task, string nameDataBases, string nameTable) {
+            base.Channel.SaveChangesToDb(task, nameDataBases, nameTable);
         }
         
-        public System.Threading.Tasks.Task SaveChangesToDbAsync(string command, string nameDataBases, string nameTable) {
-            return base.Channel.SaveChangesToDbAsync(command, nameDataBases, nameTable);
+        public System.Threading.Tasks.Task SaveChangesToDbAsync(ClientTaskOrganizer.RefServiceTaskOrganizer.Task[] task, string nameDataBases, string nameTable) {
+            return base.Channel.SaveChangesToDbAsync(task, nameDataBases, nameTable);
         }
     }
 }

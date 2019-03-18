@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.butStarttHost = new System.Windows.Forms.Button();
-            this.TextStatus = new System.Windows.Forms.RichTextBox();
+            this.textBoxStatus = new System.Windows.Forms.RichTextBox();
             this.butStopHost = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
@@ -46,15 +46,15 @@
             this.butStarttHost.UseVisualStyleBackColor = true;
             this.butStarttHost.Click += new System.EventHandler(this.butStartHost_Click);
             // 
-            // TextStatus
+            // textBoxStatus
             // 
-            this.TextStatus.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.TextStatus.Location = new System.Drawing.Point(10, 80);
-            this.TextStatus.Name = "TextStatus";
-            this.TextStatus.ReadOnly = true;
-            this.TextStatus.Size = new System.Drawing.Size(271, 96);
-            this.TextStatus.TabIndex = 1;
-            this.TextStatus.Text = "";
+            this.textBoxStatus.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBoxStatus.Location = new System.Drawing.Point(10, 80);
+            this.textBoxStatus.Name = "textBoxStatus";
+            this.textBoxStatus.ReadOnly = true;
+            this.textBoxStatus.Size = new System.Drawing.Size(271, 96);
+            this.textBoxStatus.TabIndex = 1;
+            this.textBoxStatus.Text = "";
             // 
             // butStopHost
             // 
@@ -93,7 +93,7 @@
             this.ClientSize = new System.Drawing.Size(290, 184);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.butStopHost);
-            this.Controls.Add(this.TextStatus);
+            this.Controls.Add(this.textBoxStatus);
             this.Controls.Add(this.butStarttHost);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -105,12 +105,11 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button butStarttHost;
-        private System.Windows.Forms.RichTextBox TextStatus;
-        private System.Windows.Forms.Button butStopHost;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.RichTextBox richTextBox1;
+        protected System.Windows.Forms.Button butStarttHost;
+        private System.Windows.Forms.RichTextBox textBoxStatus;
+        private System.Windows.Forms.Button butStopHost;
     }
 }
 

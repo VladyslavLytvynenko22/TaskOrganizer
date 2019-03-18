@@ -72,7 +72,7 @@
   <xs:element name="SaveChangesToDb">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" name="command" nillable="true" type="xs:string" />
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/WCF_TaskOrganizer" minOccurs="0" name="task" nillable="true" type="q2:ArrayOfTask" />
         <xs:element minOccurs="0" name="nameDataBases" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="nameTable" nillable="true" type="xs:string" />
       </xs:sequence>
