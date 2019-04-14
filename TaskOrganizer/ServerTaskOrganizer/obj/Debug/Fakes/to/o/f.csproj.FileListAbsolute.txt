@@ -1,0 +1,12 @@
+E:\GitHub\TaskOrganizer\TaskOrganizer\ServerTaskOrganizer\obj\Debug\Fakes\to\b\TaskOrganizer.Fakes.xml
+E:\GitHub\TaskOrganizer\TaskOrganizer\ServerTaskOrganizer\obj\Debug\Fakes\to\b\TaskOrganizer.Fakes.dll
+E:\GitHub\TaskOrganizer\TaskOrganizer\ServerTaskOrganizer\obj\Debug\Fakes\to\b\TaskOrganizer.Fakes.pdb
+E:\GitHub\TaskOrganizer\TaskOrganizer\ServerTaskOrganizer\obj\Debug\Fakes\to\b\Microsoft.QualityTools.Testing.Fakes.dll
+E:\GitHub\TaskOrganizer\TaskOrganizer\ServerTaskOrganizer\obj\Debug\Fakes\to\b\TaskOrganizer.dll
+E:\GitHub\TaskOrganizer\TaskOrganizer\ServerTaskOrganizer\obj\Debug\Fakes\to\b\TaskOrganizer.pdb
+E:\GitHub\TaskOrganizer\TaskOrganizer\ServerTaskOrganizer\obj\Debug\Fakes\to\b\TaskOrganizer.dll.config
+E:\GitHub\TaskOrganizer\TaskOrganizer\ServerTaskOrganizer\obj\Debug\Fakes\to\b\ru\Microsoft.QualityTools.Testing.Fakes.resources.dll
+E:\GitHub\TaskOrganizer\TaskOrganizer\ServerTaskOrganizer\obj\Debug\Fakes\to\o\f.csprojResolveAssemblyReference.cache
+E:\GitHub\TaskOrganizer\TaskOrganizer\ServerTaskOrganizer\obj\Debug\Fakes\to\o\f.csproj.CoreCompileInputs.cache
+E:\GitHub\TaskOrganizer\TaskOrganizer\ServerTaskOrganizer\obj\Debug\Fakes\to\o\TaskOrganizer.Fakes.dll
+E:\GitHub\TaskOrganizer\TaskOrganizer\ServerTaskOrganizer\obj\Debug\Fakes\to\o\TaskOrganizer.Fakes.pdb

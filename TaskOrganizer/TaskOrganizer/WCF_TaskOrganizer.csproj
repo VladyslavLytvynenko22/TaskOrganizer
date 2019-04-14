@@ -44,6 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ConfigConnectDatabase.cs" />
     <Compile Include="Database.cs" />
     <Compile Include="DatabaseConnection.cs" />
     <Compile Include="ITaskOrganizer.cs" />

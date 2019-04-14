@@ -21,5 +21,14 @@
             this.Month = Month;
             this.Day = Day;
         }
+        public Task(string Description, string Priority, bool Status, int Year, int Month, int Day)
+        {
+            this.Description = Description;
+            this.Priority = Priority;
+            this.Status = Status;
+            this.Year = Year;
+            this.Month = Month;
+            this.Day = Day;
+        }
     }
 }

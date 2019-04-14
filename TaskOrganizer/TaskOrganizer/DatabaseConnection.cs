@@ -1,7 +1,10 @@
 ﻿using System;
+using System.Data;
 using System.Data.SqlClient;
+using System.IO;
 using System.Net;
 using System.Windows.Forms;
+using TaskOrganizer;
 
 namespace WCF_TaskOrganizer
 {
@@ -9,19 +12,35 @@ namespace WCF_TaskOrganizer
     {
         static internal SqlConnection conn;
         static internal SqlCommand comm;
-        static internal bool ConnectToDb(string nameDataBases, string nameTable)//підключення до бази данних
+        static internal ConfigConnectDatabase configConnectDatabase = new ConfigConnectDatabase();
+        static public bool GetNameDatabaseAndTable()//отримати дані з файла для підключення до БД
         {
+            using (StreamReader sw = new StreamReader("ConfigConnectDatabase.txt"))
+            {
+                configConnectDatabase.nameServer = sw.ReadLine();
+                configConnectDatabase.nameDatabase = sw.ReadLine();
+                configConnectDatabase.nameTableDatabase = sw.ReadLine();
+            }
+
+            return true;
+        }
+
+        static internal bool ConnectToDb()//підключення до бази данних
+        {
+            GetNameDatabaseAndTable();
             String hostName = Dns.GetHostName();
             SqlConnectionStringBuilder connStringBuilder;
-            connStringBuilder = new SqlConnectionStringBuilder();
-            connStringBuilder.DataSource = $"{hostName}\\{nameDataBases}";//тут міняємо назву компа і назву сервера SQL
-            connStringBuilder.InitialCatalog = nameTable;//тут назва таблички в БД
-            connStringBuilder.Encrypt = true;
-            connStringBuilder.TrustServerCertificate = true;
-            connStringBuilder.ConnectTimeout = 30;
-            connStringBuilder.AsynchronousProcessing = true;
-            connStringBuilder.MultipleActiveResultSets = true;
-            connStringBuilder.IntegratedSecurity = true;
+            connStringBuilder = new SqlConnectionStringBuilder
+            {
+                DataSource = $"{hostName}\\{configConnectDatabase.nameServer}",//тут задаємо назву компа і назву сервера SQL
+                InitialCatalog = configConnectDatabase.nameDatabase,//тут назва БД
+                Encrypt = true,
+                TrustServerCertificate = true,
+                ConnectTimeout = 30,
+                AsynchronousProcessing = true,
+                MultipleActiveResultSets = true,
+                IntegratedSecurity = true
+            };
 
             conn = new SqlConnection(connStringBuilder.ToString());
             comm = conn.CreateCommand();
@@ -45,7 +64,7 @@ namespace WCF_TaskOrganizer
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error disconnect from databases");
+                MessageBox.Show("Error disconnect from databases!");
             }
         }
     }

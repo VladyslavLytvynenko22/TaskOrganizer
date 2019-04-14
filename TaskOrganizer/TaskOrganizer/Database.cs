@@ -8,14 +8,14 @@ namespace WCF_TaskOrganizer
 {
     static class Database
     {
-        static public List<Task> SelectAllFromDb(string nameDataBases, string nameTable)//показати все що є в базі данних
+        static public List<Task> SelectAllFromDb()//показати все що є в базі данних
         {
             List<Task> taskL = new List<Task>();
             SqlDataReader reader = null;
-            DatabaseConnection.ConnectToDb(nameDataBases, nameTable);
+            DatabaseConnection.ConnectToDb();
             try
             {
-                DatabaseConnection.comm.CommandText = "SELECT * FROM dbo.TableOrganizer ORDER BY 'Year', 'Month', 'Day';";
+                DatabaseConnection.comm.CommandText = $"SELECT * FROM dbo.{DatabaseConnection.configConnectDatabase.nameTableDatabase} ORDER BY 'Year', 'Month', 'Day';";
                 DatabaseConnection.comm.CommandType = CommandType.Text;
                 reader = DatabaseConnection.comm.ExecuteReader();
                 while (reader.Read())
@@ -29,38 +29,39 @@ namespace WCF_TaskOrganizer
             return taskL;
         }
 
-        static  public void DeleteRowInDb(int Id, string nameDataBases, string nameTable)
+        static public void DeleteRowInDb(int Id)//видалити рядок за ID
         {
-            DatabaseConnection.ConnectToDb(nameDataBases, nameTable);
+            DatabaseConnection.ConnectToDb();
             try
             {
-                DatabaseConnection.comm.CommandText = $"DELETE FROM dbo.TableOrganizer WHERE Id = {Id};";
+                DatabaseConnection.comm.CommandText = $"DELETE FROM dbo.{DatabaseConnection.configConnectDatabase.nameTableDatabase} WHERE Id = {Id};";
                 DatabaseConnection.comm.CommandType = CommandType.Text;
                 DatabaseConnection.comm.ExecuteNonQuery();
             }
             catch (Exception ex) { MessageBox.Show(ex.ToString()); }
         }
 
-        static public void AddRowsToDb(string command, string nameDataBases, string nameTable)
+        static public void AddRowsToDb(Task task)//додати рядок
         {
-            DatabaseConnection.ConnectToDb(nameDataBases, nameTable);
+            DatabaseConnection.ConnectToDb();
             try
             {
-                DatabaseConnection.comm.CommandText = $"INSERT INTO dbo.TableOrganizer VALUES ({command});";
+                DatabaseConnection.comm.CommandText = $"INSERT INTO dbo.{DatabaseConnection.configConnectDatabase.nameTableDatabase} VALUES (\'{task.Description}\', \'{task.Priority}\', 0, {task.Year}, {task.Month}, {task.Day});";
                 DatabaseConnection.comm.CommandType = CommandType.Text;
                 DatabaseConnection.comm.ExecuteNonQuery();
             }
             catch (Exception ex) { MessageBox.Show(ex.ToString()); }
         }
 
-        static public void SaveChangesToDb(List<Task> taskL, string nameDataBases, string nameTable)
+        static public void SaveChangesToDb(List<Task> taskL)//зберегти все до БД/////доробити строку SET///////////////////////////////////////////////////////////////////
         {
-            DatabaseConnection.ConnectToDb(nameDataBases, nameTable);
+            DatabaseConnection.ConnectToDb();
             try
             {
                 foreach (Task task in taskL)
                 {
-                    DatabaseConnection.comm.CommandText = $"UPDATE dbo.TableOrganizer SET Description = \'{task.Description}\', Priority = \'{task.Priority}\', Status = \'{task.Status}\', Year = {task.Year}, Month = {task.Month}, Day = {task.Day} WHERE ID = {task.Id};";
+                    DatabaseConnection.comm.CommandText = $"UPDATE dbo.{DatabaseConnection.configConnectDatabase.nameTableDatabase} SET Description = \'{task.Description}\', Priority = \'{task.Priority}\', Status = \'{task.Status}\', Year = {task.Year}, Month = {task.Month}, Day = {task.Day} WHERE ID = {task.Id};";
+                    //DatabaseConnection.comm.CommandText = $"UPDATE dbo.{DatabaseConnection.configConnectDatabase.nameTableDatabase} SET \'{task.Description}\', \'{task.Priority}\', \'{task.Status}\', {task.Year}, {task.Month}, {task.Day} WHERE ID = {task.Id};";
                     DatabaseConnection.comm.CommandType = CommandType.Text;
                     DatabaseConnection.comm.ExecuteNonQuery();
                 }

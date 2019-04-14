@@ -36,18 +36,12 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtBxIP = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.txtBoxNameDataBases = new System.Windows.Forms.TextBox();
-            this.txtBoxNameTableDataBases = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // butConnect
             // 
-            this.butConnect.Location = new System.Drawing.Point(12, 173);
+            this.butConnect.Location = new System.Drawing.Point(12, 66);
             this.butConnect.Name = "butConnect";
             this.butConnect.Size = new System.Drawing.Size(71, 27);
             this.butConnect.TabIndex = 5;
@@ -57,7 +51,7 @@
             // 
             // butExit
             // 
-            this.butExit.Location = new System.Drawing.Point(103, 173);
+            this.butExit.Location = new System.Drawing.Point(103, 66);
             this.butExit.Name = "butExit";
             this.butExit.Size = new System.Drawing.Size(77, 27);
             this.butExit.TabIndex = 6;
@@ -122,59 +116,12 @@
             this.label1.TabIndex = 5;
             this.label1.Text = "Enter IP address";
             // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.txtBoxNameTableDataBases);
-            this.groupBox2.Controls.Add(this.label6);
-            this.groupBox2.Controls.Add(this.txtBoxNameDataBases);
-            this.groupBox2.Controls.Add(this.label7);
-            this.groupBox2.Location = new System.Drawing.Point(12, 67);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(168, 100);
-            this.groupBox2.TabIndex = 10;
-            this.groupBox2.TabStop = false;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(8, 56);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(142, 13);
-            this.label6.TabIndex = 10;
-            this.label6.Text = "Enter name table DataBases";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(8, 16);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(116, 13);
-            this.label7.TabIndex = 9;
-            this.label7.Text = "Enter name DataBases";
-            // 
-            // txtBoxNameDataBases
-            // 
-            this.txtBoxNameDataBases.Location = new System.Drawing.Point(7, 32);
-            this.txtBoxNameDataBases.Name = "txtBoxNameDataBases";
-            this.txtBoxNameDataBases.Size = new System.Drawing.Size(154, 20);
-            this.txtBoxNameDataBases.TabIndex = 11;
-            this.txtBoxNameDataBases.Text = "SQLEXPRESS";
-            // 
-            // txtBoxNameTableDataBases
-            // 
-            this.txtBoxNameTableDataBases.Location = new System.Drawing.Point(7, 72);
-            this.txtBoxNameTableDataBases.Name = "txtBoxNameTableDataBases";
-            this.txtBoxNameTableDataBases.Size = new System.Drawing.Size(154, 20);
-            this.txtBoxNameTableDataBases.TabIndex = 13;
-            this.txtBoxNameTableDataBases.Text = "DbOrganizer";
-            // 
             // ConnectToServerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(192, 209);
+            this.ClientSize = new System.Drawing.Size(192, 104);
             this.ControlBox = false;
-            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.butExit);
             this.Controls.Add(this.butConnect);
@@ -185,8 +132,6 @@
             this.Text = "Connect To Server";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -200,10 +145,5 @@
         private System.Windows.Forms.Label label2;
         public System.Windows.Forms.TextBox txtBxIP;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        public System.Windows.Forms.TextBox txtBoxNameTableDataBases;
-        public System.Windows.Forms.TextBox txtBoxNameDataBases;
     }
 }

@@ -1,37 +1,38 @@
 ﻿using System.Collections.Generic;
+using TaskOrganizer;
 
 namespace WCF_TaskOrganizer
 {
     public class WCF_TaskOrganizer : ITaskOrganizer
     {
-        void ITaskOrganizer.AddRowsToDb(string command, string nameDataBases, string nameTable)
+        void ITaskOrganizer.AddRowsToDb(Task task)
         {
-            Database.AddRowsToDb(command, nameDataBases, nameTable);
+            Database.AddRowsToDb(task);
         }
 
-        bool ITaskOrganizer.ConnectToDb(string nameDataBases, string nameTable)
+        bool ITaskOrganizer.ConnectToDb()
         {
-            return DatabaseConnection.ConnectToDb(nameDataBases, nameTable);
+            return DatabaseConnection.ConnectToDb();
         }
 
-        void ITaskOrganizer.DeleteRowInDb(int id, string nameDataBases, string nameTable)
+        void ITaskOrganizer.DeleteRowInDb(int id)
         {
-            Database.DeleteRowInDb(id, nameDataBases, nameTable);
+            Database.DeleteRowInDb(id);
         }
 
         void ITaskOrganizer.DisconnectFromDb()
         {
             DatabaseConnection.DisconnectFromDb();
         }
-
-        void ITaskOrganizer.SaveChangesToDb(List<Task> task, string nameDataBases, string nameTable)
+        
+        void ITaskOrganizer.SaveChangesToDb(List<Task> task)
         {
-            Database.SaveChangesToDb(task, nameDataBases, nameTable);
+            Database.SaveChangesToDb(task);
         }
 
-        List<Task> ITaskOrganizer.SelectAllFromDb(string nameDataBases, string nameTable)
+        List<Task> ITaskOrganizer.SelectAllFromDb()
         {
-            return Database.SelectAllFromDb(nameDataBases, nameTable);
+            return Database.SelectAllFromDb();
         }
     }
 }

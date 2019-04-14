@@ -10,15 +10,16 @@ namespace ServerTaskOrganizer
         static internal int ReturnPort()//шукаємо вільний порт
         {
             IPGlobalProperties igp = IPGlobalProperties.GetIPGlobalProperties();
-            TcpConnectionInformation[] tinfo = igp.GetActiveTcpConnections();//беремо вже активні порти
-            int i = 1000;//почнемо шукати ще не активні порти починаючи з 1000
-            foreach (TcpConnectionInformation tcpi in tinfo)
+            System.Net.IPEndPoint[] tinfo = igp.GetActiveTcpListeners();
+            bool OK = false;
+            for (int i = 1000; i<65534; i++)//почнемо шукати ще не активні порти починаючи з 1000
             {
-                if (tcpi.LocalEndPoint.Port != i)//порівнюємо активний порт з числом "i"
+                OK = true;
+                foreach (System.Net.IPEndPoint tcpi in tinfo)
                 {
-                    return i;//повертаємо якщо цей порт ще не активний
+                    if (tcpi.Port == i) OK = false;
                 }
-                i++;
+                if (OK) return i;
             }
             return -1;
         }

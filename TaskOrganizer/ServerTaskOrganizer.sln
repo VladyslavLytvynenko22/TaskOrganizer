@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.26730.10
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WCF_TaskOrganizer", "TaskOrganizer\WCF_TaskOrganizer.csproj", "{C7B53B65-2D60-4B19-8936-77240E2721C6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServerTaskOrganizer", "ServerTaskOrganizer\ServerTaskOrganizer.csproj", "{62C8C45C-565B-4EFF-A2DE-D178A73F6D9D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HostTaskOrganizer", "ServerTaskOrganizer\HostTaskOrganizer.csproj", "{62C8C45C-565B-4EFF-A2DE-D178A73F6D9D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

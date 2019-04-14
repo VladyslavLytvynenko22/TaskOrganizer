@@ -1,4 +1,4 @@
-﻿using ClientTaskOrganizer.RefServiceTaskOrganizer;
+﻿using ClientTaskOrganizer.ServiceReference1;
 using System;
 using System.Windows.Forms;
 
@@ -6,11 +6,12 @@ namespace ClientTaskOrganizer
 {
     static class WorkWithDatabase
     {
-        static public void SelectAllToDataGridView(DataGridView DataGridView1, TaskOrganizerClient client, string nameDataBases, string nameTable)//вибрати всі значення з бази даних
+        static internal TaskOrganizerClient client;
+        static public void SelectAllToDataGridView(ref DataGridView DataGridView1)//вибрати всі значення з бази даних
         {
             try
             {
-                RefServiceTaskOrganizer.Task[] task = client.SelectAllFromDb(nameDataBases, nameTable);//отримуэмо дані з бази даних
+                Task[] task = client.SelectAllFromDb();//отримуэмо дані з бази даних
                 for (int i = 0; i < task.Length; i++)
                 {
                     //ID вставляємо в схований стовбец
@@ -20,7 +21,7 @@ namespace ClientTaskOrganizer
             catch (Exception ex) { MessageBox.Show(ex.ToString()); }
         }
 
-        static public void DeleteRowInDb(DataGridViewCellEventArgs e, DataGridView DataGridView1, TaskOrganizerClient client, string nameDataBases, string nameTable)//видалити рядок за індексом
+        static public void DeleteRowInDb(DataGridViewCellEventArgs e, DataGridView DataGridView1)//видалити рядок за індексом
         {
             try
             {
@@ -28,7 +29,7 @@ namespace ClientTaskOrganizer
                 {
                     //надсилаємо ID який треба видалити
                     //ID беремо з прихованого стовбця
-                    client.DeleteRowInDb(Convert.ToInt32(DataGridView1.Rows[DataGridView1.CurrentCell.RowIndex].Cells["Id"].Value), nameDataBases, nameTable);
+                    client.DeleteRowInDb(Convert.ToInt32(DataGridView1.Rows[DataGridView1.CurrentCell.RowIndex].Cells["Id"].Value));
                 }
             }
             catch (Exception ex) { MessageBox.Show(ex.ToString()); }

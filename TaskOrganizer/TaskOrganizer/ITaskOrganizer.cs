@@ -7,21 +7,21 @@ namespace WCF_TaskOrganizer
     public interface ITaskOrganizer
     {
         [OperationContract]
-        List<Task> SelectAllFromDb(string nameDataBases, string nameTable);
+        List<Task> SelectAllFromDb();
 
         [OperationContract]
-        bool ConnectToDb(string nameDataBases, string nameTable);
-
+        bool ConnectToDb();
+        
         [OperationContract]
         void DisconnectFromDb();
+        
+        [OperationContract]
+        void DeleteRowInDb(int Id);
 
         [OperationContract]
-        void DeleteRowInDb(int Id, string nameDataBases, string nameTable);
+        void AddRowsToDb(Task task);
 
         [OperationContract]
-        void AddRowsToDb(string command, string nameDataBases, string nameTable);
-
-        [OperationContract]
-        void SaveChangesToDb(List<Task> task, string nameDataBases, string nameTable);
+        void SaveChangesToDb(List<Task> task);
     }
 }

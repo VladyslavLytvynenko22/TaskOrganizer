@@ -53,7 +53,7 @@
     <Compile Include="AddRowForm.Designer.cs">
       <DependentUpon>AddRowForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Connected Services\RefServiceTaskOrganizer\Reference.cs">
+    <Compile Include="Connected Services\ServiceReference1\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -64,13 +64,14 @@
     <Compile Include="ConnectToServerForm.Designer.cs">
       <DependentUpon>ConnectToServerForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="User.cs" />
     <Compile Include="WorkWithDatabase.cs" />
     <Compile Include="WorkWithDataGridView.cs" />
-    <Compile Include="Form1.cs">
+    <Compile Include="ClientTaskOrganizer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="ClientTaskOrganizer.Designer.cs">
+      <DependentUpon>ClientTaskOrganizer.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -80,8 +81,8 @@
     <EmbeddedResource Include="ConnectToServerForm.resx">
       <DependentUpon>ConnectToServerForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="ClientTaskOrganizer.resx">
+      <DependentUpon>ClientTaskOrganizer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -93,19 +94,19 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <None Include="Connected Services\RefServiceTaskOrganizer\ClientTaskOrganizer.RefServiceTaskOrganizer.Task.datasource">
+    <None Include="Connected Services\ServiceReference1\ClientTaskOrganizer.ServiceReference1.Task.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\RefServiceTaskOrganizer\item.xsd">
+    <None Include="Connected Services\ServiceReference1\item.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\RefServiceTaskOrganizer\item1.xsd">
+    <None Include="Connected Services\ServiceReference1\item1.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\RefServiceTaskOrganizer\item2.xsd">
+    <None Include="Connected Services\ServiceReference1\item2.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\RefServiceTaskOrganizer\WCF_TaskOrganizer1.wsdl" />
+    <None Include="Connected Services\ServiceReference1\WCF_TaskOrganizer.wsdl" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -120,28 +121,28 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadata Include="Connected Services\" />
-  </ItemGroup>
-  <ItemGroup>
-    <WCFMetadataStorage Include="Connected Services\RefServiceTaskOrganizer\" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Connected Services\RefServiceTaskOrganizer\configuration91.svcinfo" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Connected Services\RefServiceTaskOrganizer\configuration.svcinfo" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Connected Services\RefServiceTaskOrganizer\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Photo\ButtonDelete.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\RefServiceTaskOrganizer\item.disco" />
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\ServiceReference1\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\ServiceReference1\item.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\ServiceReference1\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\ServiceReference1\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\ServiceReference1\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

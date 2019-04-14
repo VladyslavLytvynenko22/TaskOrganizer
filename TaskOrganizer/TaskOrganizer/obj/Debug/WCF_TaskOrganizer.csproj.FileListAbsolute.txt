@@ -12,10 +12,10 @@ E:\GitHub\Task_Organizer\TaskOrganizer\TaskOrganizer\obj\Debug\WCF_TaskOrganizer
 E:\GitHub\Task_Organizer\TaskOrganizer\TaskOrganizer\obj\Debug\WCF_TaskOrganizer.csproj.CoreCompileInputs.cache
 E:\GitHub\Task_Organizer\TaskOrganizer\TaskOrganizer\obj\Debug\TaskOrganizer.dll
 E:\GitHub\Task_Organizer\TaskOrganizer\TaskOrganizer\obj\Debug\TaskOrganizer.pdb
-E:\GitHub\TaskOrganizer\TaskOrganizer\TaskOrganizer\obj\Debug\WCF_TaskOrganizer.csprojResolveAssemblyReference.cache
 E:\GitHub\TaskOrganizer\TaskOrganizer\TaskOrganizer\obj\Debug\WCF_TaskOrganizer.csproj.CoreCompileInputs.cache
 E:\GitHub\TaskOrganizer\TaskOrganizer\TaskOrganizer\obj\Debug\TaskOrganizer.dll
 E:\GitHub\TaskOrganizer\TaskOrganizer\TaskOrganizer\obj\Debug\TaskOrganizer.pdb
 E:\GitHub\TaskOrganizer\TaskOrganizer\TaskOrganizer\bin\Debug\TaskOrganizer.dll.config
 E:\GitHub\TaskOrganizer\TaskOrganizer\TaskOrganizer\bin\Debug\TaskOrganizer.dll
 E:\GitHub\TaskOrganizer\TaskOrganizer\TaskOrganizer\bin\Debug\TaskOrganizer.pdb
+E:\GitHub\TaskOrganizer\TaskOrganizer\TaskOrganizer\obj\Debug\WCF_TaskOrganizer.csprojResolveAssemblyReference.cache

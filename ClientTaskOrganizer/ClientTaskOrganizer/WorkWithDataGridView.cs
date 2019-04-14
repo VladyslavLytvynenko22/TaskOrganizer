@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
-using ClientTaskOrganizer.RefServiceTaskOrganizer;
+using ClientTaskOrganizer.ServiceReference1;
 
 namespace ClientTaskOrganizer
 {
@@ -22,7 +22,6 @@ namespace ClientTaskOrganizer
                 task.Day = Convert.ToInt32(DataGridView1.Rows[i].Cells["Day"].Value);
                 taskL.Add(task);
             }
-
             return taskL;
         }
 
