@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.ServiceModel;
+using TaskOrganizer;
 
 namespace WCF_TaskOrganizer
 {
@@ -7,7 +8,7 @@ namespace WCF_TaskOrganizer
     public interface ITaskOrganizer
     {
         [OperationContract]
-        List<Task> SelectAllFromDb();
+        List<Task> SelectAllFromDb(string userLogin);
 
         [OperationContract]
         bool ConnectToDb();
@@ -23,5 +24,11 @@ namespace WCF_TaskOrganizer
 
         [OperationContract]
         void SaveChangesToDb(List<Task> task);
+
+        [OperationContract]
+        bool ConfirmUser(User user);
+
+        [OperationContract]
+        bool AddUser(User user);
     }
 }

@@ -11,7 +11,7 @@ namespace ClientTaskOrganizer
         {
             try
             {
-                Task[] task = client.SelectAllFromDb();//отримуэмо дані з бази даних
+                Task[] task = client.SelectAllFromDb(User.userLogin);//отримуэмо дані з бази даних
                 for (int i = 0; i < task.Length; i++)
                 {
                     //ID вставляємо в схований стовбец

@@ -34,6 +34,12 @@
         <member name="P:TaskOrganizer.Fakes.ShimConfigConnectDatabase.AllInstances.nameTableDatabaseSetString">
             <summary>Задает оболочка совместимости ConfigConnectDatabase.set_nameTableDatabase(String value)</summary>
         </member>
+        <member name="P:TaskOrganizer.Fakes.ShimConfigConnectDatabase.AllInstances.nameTableUserDatabaseGet">
+            <summary>Задает оболочка совместимости ConfigConnectDatabase.get_nameTableUserDatabase()</summary>
+        </member>
+        <member name="P:TaskOrganizer.Fakes.ShimConfigConnectDatabase.AllInstances.nameTableUserDatabaseSetString">
+            <summary>Задает оболочка совместимости ConfigConnectDatabase.set_nameTableUserDatabase(String value)</summary>
+        </member>
         <member name="M:TaskOrganizer.Fakes.ShimConfigConnectDatabase.BehaveAsCurrent">
             <summary>Назначение поведения &quot;Current&quot; всем методам типа с оболочкой совместимости</summary>
         </member>
@@ -46,8 +52,8 @@
         <member name="P:TaskOrganizer.Fakes.ShimConfigConnectDatabase.Constructor">
             <summary>Задает оболочка совместимости ConfigConnectDatabase.ConfigConnectDatabase()</summary>
         </member>
-        <member name="P:TaskOrganizer.Fakes.ShimConfigConnectDatabase.ConstructorStringStringString">
-            <summary>Задает оболочка совместимости ConfigConnectDatabase.ConfigConnectDatabase(String nameServer, String nameDatabase, String nameTableDatabase)</summary>
+        <member name="P:TaskOrganizer.Fakes.ShimConfigConnectDatabase.ConstructorStringStringStringString">
+            <summary>Задает оболочка совместимости ConfigConnectDatabase.ConfigConnectDatabase(String nameServer, String nameDatabase, String nameTableDatabase, String nameTableUserDatabase)</summary>
         </member>
         <member name="P:TaskOrganizer.Fakes.ShimConfigConnectDatabase.nameDatabaseGet">
             <summary>Задает оболочка совместимости ConfigConnectDatabase.get_nameDatabase()</summary>
@@ -67,13 +73,70 @@
         <member name="P:TaskOrganizer.Fakes.ShimConfigConnectDatabase.nameTableDatabaseSetString">
             <summary>Задает оболочка совместимости ConfigConnectDatabase.set_nameTableDatabase(String value)</summary>
         </member>
+        <member name="P:TaskOrganizer.Fakes.ShimConfigConnectDatabase.nameTableUserDatabaseGet">
+            <summary>Задает оболочка совместимости ConfigConnectDatabase.get_nameTableUserDatabase()</summary>
+        </member>
+        <member name="P:TaskOrganizer.Fakes.ShimConfigConnectDatabase.nameTableUserDatabaseSetString">
+            <summary>Задает оболочка совместимости ConfigConnectDatabase.set_nameTableUserDatabase(String value)</summary>
+        </member>
+        <member name="T:TaskOrganizer.Fakes.ShimUser">
+            <summary>Тип оболочки совместимости для TaskOrganizer.User</summary>
+        </member>
+        <member name="M:TaskOrganizer.Fakes.ShimUser.#ctor">
+            <summary>Инициализация нового экземпляра оболочки совместимости</summary>
+        </member>
+        <member name="M:TaskOrganizer.Fakes.ShimUser.#ctor(TaskOrganizer.User)">
+            <summary>Инициализация новой оболочки совместимости для заданного экземпляра</summary>
+        </member>
+        <member name="T:TaskOrganizer.Fakes.ShimUser.AllInstances">
+            <summary>Определение оболочек совместимости для всех членов экземпляров</summary>
+        </member>
+        <member name="P:TaskOrganizer.Fakes.ShimUser.AllInstances.UserLoginGet">
+            <summary>Задает оболочка совместимости User.get_UserLogin()</summary>
+        </member>
+        <member name="P:TaskOrganizer.Fakes.ShimUser.AllInstances.UserLoginSetString">
+            <summary>Задает оболочка совместимости User.set_UserLogin(String value)</summary>
+        </member>
+        <member name="P:TaskOrganizer.Fakes.ShimUser.AllInstances.UserPasswordGet">
+            <summary>Задает оболочка совместимости User.get_UserPassword()</summary>
+        </member>
+        <member name="P:TaskOrganizer.Fakes.ShimUser.AllInstances.UserPasswordSetString">
+            <summary>Задает оболочка совместимости User.set_UserPassword(String value)</summary>
+        </member>
+        <member name="M:TaskOrganizer.Fakes.ShimUser.BehaveAsCurrent">
+            <summary>Назначение поведения &quot;Current&quot; всем методам типа с оболочкой совместимости</summary>
+        </member>
+        <member name="M:TaskOrganizer.Fakes.ShimUser.BehaveAsNotImplemented">
+            <summary>Назначение поведения &quot;NotImplemented&quot; всем методам типа с оболочкой совместимости</summary>
+        </member>
+        <member name="P:TaskOrganizer.Fakes.ShimUser.Behavior">
+            <summary>Назначение поведения всем методам типа с оболочкой совместимости</summary>
+        </member>
+        <member name="P:TaskOrganizer.Fakes.ShimUser.Constructor">
+            <summary>Задает оболочка совместимости User.User()</summary>
+        </member>
+        <member name="P:TaskOrganizer.Fakes.ShimUser.ConstructorStringString">
+            <summary>Задает оболочка совместимости User.User(String UserLogin, String UserPassword)</summary>
+        </member>
+        <member name="P:TaskOrganizer.Fakes.ShimUser.UserLoginGet">
+            <summary>Задает оболочка совместимости User.get_UserLogin()</summary>
+        </member>
+        <member name="P:TaskOrganizer.Fakes.ShimUser.UserLoginSetString">
+            <summary>Задает оболочка совместимости User.set_UserLogin(String value)</summary>
+        </member>
+        <member name="P:TaskOrganizer.Fakes.ShimUser.UserPasswordGet">
+            <summary>Задает оболочка совместимости User.get_UserPassword()</summary>
+        </member>
+        <member name="P:TaskOrganizer.Fakes.ShimUser.UserPasswordSetString">
+            <summary>Задает оболочка совместимости User.set_UserPassword(String value)</summary>
+        </member>
         <member name="T:TaskOrganizer.Fakes.StubConfigConnectDatabase">
             <summary>Тип заглушки TaskOrganizer.ConfigConnectDatabase</summary>
         </member>
         <member name="M:TaskOrganizer.Fakes.StubConfigConnectDatabase.#ctor">
             <summary>Инициализирует новый экземпляр</summary>
         </member>
-        <member name="M:TaskOrganizer.Fakes.StubConfigConnectDatabase.#ctor(System.String,System.String,System.String)">
+        <member name="M:TaskOrganizer.Fakes.StubConfigConnectDatabase.#ctor(System.String,System.String,System.String,System.String)">
             <summary>Инициализирует новый экземпляр</summary>
         </member>
         <member name="P:TaskOrganizer.Fakes.StubConfigConnectDatabase.CallBase">
@@ -86,6 +149,27 @@
             <summary>Получает или задает поведение экземпляра.</summary>
         </member>
         <member name="P:TaskOrganizer.Fakes.StubConfigConnectDatabase.InstanceObserver">
+            <summary>Получает или задает наблюдатель экземпляра.</summary>
+        </member>
+        <member name="T:TaskOrganizer.Fakes.StubUser">
+            <summary>Тип заглушки TaskOrganizer.User</summary>
+        </member>
+        <member name="M:TaskOrganizer.Fakes.StubUser.#ctor">
+            <summary>Инициализирует новый экземпляр</summary>
+        </member>
+        <member name="M:TaskOrganizer.Fakes.StubUser.#ctor(System.String,System.String)">
+            <summary>Инициализирует новый экземпляр</summary>
+        </member>
+        <member name="P:TaskOrganizer.Fakes.StubUser.CallBase">
+            <summary>Получает или задает значение, указывающее, следует ли вызывать базовый метод вместо резервного поведения</summary>
+        </member>
+        <member name="M:TaskOrganizer.Fakes.StubUser.InitializeStub">
+            <summary>Инициализирует новый экземпляр type StubUser</summary>
+        </member>
+        <member name="P:TaskOrganizer.Fakes.StubUser.InstanceBehavior">
+            <summary>Получает или задает поведение экземпляра.</summary>
+        </member>
+        <member name="P:TaskOrganizer.Fakes.StubUser.InstanceObserver">
             <summary>Получает или задает наблюдатель экземпляра.</summary>
         </member>
         <member name="T:WCF_TaskOrganizer.Fakes.ShimTask">
@@ -136,6 +220,12 @@
         <member name="P:WCF_TaskOrganizer.Fakes.ShimTask.AllInstances.StatusSetBoolean">
             <summary>Задает оболочка совместимости Task.set_Status(Boolean value)</summary>
         </member>
+        <member name="P:WCF_TaskOrganizer.Fakes.ShimTask.AllInstances.UserGet">
+            <summary>Задает оболочка совместимости Task.get_User()</summary>
+        </member>
+        <member name="P:WCF_TaskOrganizer.Fakes.ShimTask.AllInstances.UserSetString">
+            <summary>Задает оболочка совместимости Task.set_User(String value)</summary>
+        </member>
         <member name="P:WCF_TaskOrganizer.Fakes.ShimTask.AllInstances.YearGet">
             <summary>Задает оболочка совместимости Task.get_Year()</summary>
         </member>
@@ -157,8 +247,8 @@
         <member name="P:WCF_TaskOrganizer.Fakes.ShimTask.ConstructorInt32StringStringBooleanInt32Int32Int32">
             <summary>Задает оболочка совместимости Task.Task(Int32 Id, String Description, String Priority, Boolean Status, Int32 Year, Int32 Month, Int32 Day)</summary>
         </member>
-        <member name="P:WCF_TaskOrganizer.Fakes.ShimTask.ConstructorStringStringBooleanInt32Int32Int32">
-            <summary>Задает оболочка совместимости Task.Task(String Description, String Priority, Boolean Status, Int32 Year, Int32 Month, Int32 Day)</summary>
+        <member name="P:WCF_TaskOrganizer.Fakes.ShimTask.ConstructorStringStringStringBooleanInt32Int32Int32">
+            <summary>Задает оболочка совместимости Task.Task(String User, String Description, String Priority, Boolean Status, Int32 Year, Int32 Month, Int32 Day)</summary>
         </member>
         <member name="P:WCF_TaskOrganizer.Fakes.ShimTask.DayGet">
             <summary>Задает оболочка совместимости Task.get_Day()</summary>
@@ -196,6 +286,12 @@
         <member name="P:WCF_TaskOrganizer.Fakes.ShimTask.StatusSetBoolean">
             <summary>Задает оболочка совместимости Task.set_Status(Boolean value)</summary>
         </member>
+        <member name="P:WCF_TaskOrganizer.Fakes.ShimTask.UserGet">
+            <summary>Задает оболочка совместимости Task.get_User()</summary>
+        </member>
+        <member name="P:WCF_TaskOrganizer.Fakes.ShimTask.UserSetString">
+            <summary>Задает оболочка совместимости Task.set_User(String value)</summary>
+        </member>
         <member name="P:WCF_TaskOrganizer.Fakes.ShimTask.YearGet">
             <summary>Задает оболочка совместимости Task.get_Year()</summary>
         </member>
@@ -211,11 +307,20 @@
         <member name="M:WCF_TaskOrganizer.Fakes.ShimWCF_TaskOrganizer.#ctor(WCF_TaskOrganizer.WCF_TaskOrganizer)">
             <summary>Инициализация новой оболочки совместимости для заданного экземпляра</summary>
         </member>
+        <member name="P:WCF_TaskOrganizer.Fakes.ShimWCF_TaskOrganizer.AddUserUser">
+            <summary>Задает оболочка совместимости WCF_TaskOrganizer.AddUser(User user)</summary>
+        </member>
         <member name="T:WCF_TaskOrganizer.Fakes.ShimWCF_TaskOrganizer.AllInstances">
             <summary>Определение оболочек совместимости для всех членов экземпляров</summary>
         </member>
+        <member name="P:WCF_TaskOrganizer.Fakes.ShimWCF_TaskOrganizer.AllInstances.AddUserUser">
+            <summary>Задает оболочка совместимости WCF_TaskOrganizer.AddUser(User user)</summary>
+        </member>
         <member name="P:WCF_TaskOrganizer.Fakes.ShimWCF_TaskOrganizer.AllInstances.WCF_TaskOrganizerITaskOrganizerAddRowsToDbTask">
             <summary>Задает оболочка совместимости WCF_TaskOrganizer.WCF_TaskOrganizer.ITaskOrganizer.AddRowsToDb(Task task)</summary>
+        </member>
+        <member name="P:WCF_TaskOrganizer.Fakes.ShimWCF_TaskOrganizer.AllInstances.WCF_TaskOrganizerITaskOrganizerConfirmUserUser">
+            <summary>Задает оболочка совместимости WCF_TaskOrganizer.WCF_TaskOrganizer.ITaskOrganizer.ConfirmUser(User user)</summary>
         </member>
         <member name="P:WCF_TaskOrganizer.Fakes.ShimWCF_TaskOrganizer.AllInstances.WCF_TaskOrganizerITaskOrganizerConnectToDb">
             <summary>Задает оболочка совместимости WCF_TaskOrganizer.WCF_TaskOrganizer.ITaskOrganizer.ConnectToDb()</summary>
@@ -229,8 +334,8 @@
         <member name="P:WCF_TaskOrganizer.Fakes.ShimWCF_TaskOrganizer.AllInstances.WCF_TaskOrganizerITaskOrganizerSaveChangesToDbListOfTask">
             <summary>Задает оболочка совместимости WCF_TaskOrganizer.WCF_TaskOrganizer.ITaskOrganizer.SaveChangesToDb(List`1&lt;Task&gt; task)</summary>
         </member>
-        <member name="P:WCF_TaskOrganizer.Fakes.ShimWCF_TaskOrganizer.AllInstances.WCF_TaskOrganizerITaskOrganizerSelectAllFromDb">
-            <summary>Задает оболочка совместимости WCF_TaskOrganizer.WCF_TaskOrganizer.ITaskOrganizer.SelectAllFromDb()</summary>
+        <member name="P:WCF_TaskOrganizer.Fakes.ShimWCF_TaskOrganizer.AllInstances.WCF_TaskOrganizerITaskOrganizerSelectAllFromDbString">
+            <summary>Задает оболочка совместимости WCF_TaskOrganizer.WCF_TaskOrganizer.ITaskOrganizer.SelectAllFromDb(String userLogin)</summary>
         </member>
         <member name="M:WCF_TaskOrganizer.Fakes.ShimWCF_TaskOrganizer.BehaveAsCurrent">
             <summary>Назначение поведения &quot;Current&quot; всем методам типа с оболочкой совместимости</summary>
@@ -250,6 +355,9 @@
         <member name="P:WCF_TaskOrganizer.Fakes.ShimWCF_TaskOrganizer.WCF_TaskOrganizerITaskOrganizerAddRowsToDbTask">
             <summary>Задает оболочка совместимости WCF_TaskOrganizer.WCF_TaskOrganizer.ITaskOrganizer.AddRowsToDb(Task task)</summary>
         </member>
+        <member name="P:WCF_TaskOrganizer.Fakes.ShimWCF_TaskOrganizer.WCF_TaskOrganizerITaskOrganizerConfirmUserUser">
+            <summary>Задает оболочка совместимости WCF_TaskOrganizer.WCF_TaskOrganizer.ITaskOrganizer.ConfirmUser(User user)</summary>
+        </member>
         <member name="P:WCF_TaskOrganizer.Fakes.ShimWCF_TaskOrganizer.WCF_TaskOrganizerITaskOrganizerConnectToDb">
             <summary>Задает оболочка совместимости WCF_TaskOrganizer.WCF_TaskOrganizer.ITaskOrganizer.ConnectToDb()</summary>
         </member>
@@ -262,8 +370,8 @@
         <member name="P:WCF_TaskOrganizer.Fakes.ShimWCF_TaskOrganizer.WCF_TaskOrganizerITaskOrganizerSaveChangesToDbListOfTask">
             <summary>Задает оболочка совместимости WCF_TaskOrganizer.WCF_TaskOrganizer.ITaskOrganizer.SaveChangesToDb(List`1&lt;Task&gt; task)</summary>
         </member>
-        <member name="P:WCF_TaskOrganizer.Fakes.ShimWCF_TaskOrganizer.WCF_TaskOrganizerITaskOrganizerSelectAllFromDb">
-            <summary>Задает оболочка совместимости WCF_TaskOrganizer.WCF_TaskOrganizer.ITaskOrganizer.SelectAllFromDb()</summary>
+        <member name="P:WCF_TaskOrganizer.Fakes.ShimWCF_TaskOrganizer.WCF_TaskOrganizerITaskOrganizerSelectAllFromDbString">
+            <summary>Задает оболочка совместимости WCF_TaskOrganizer.WCF_TaskOrganizer.ITaskOrganizer.SelectAllFromDb(String userLogin)</summary>
         </member>
         <member name="T:WCF_TaskOrganizer.Fakes.StubITaskOrganizer">
             <summary>Тип заглушки WCF_TaskOrganizer.ITaskOrganizer</summary>
@@ -273,6 +381,12 @@
         </member>
         <member name="F:WCF_TaskOrganizer.Fakes.StubITaskOrganizer.AddRowsToDbTask">
             <summary>Задает stub ITaskOrganizer.AddRowsToDb(Task task)</summary>
+        </member>
+        <member name="F:WCF_TaskOrganizer.Fakes.StubITaskOrganizer.AddUserUser">
+            <summary>Задает stub ITaskOrganizer.AddUser(User user)</summary>
+        </member>
+        <member name="F:WCF_TaskOrganizer.Fakes.StubITaskOrganizer.ConfirmUserUser">
+            <summary>Задает stub ITaskOrganizer.ConfirmUser(User user)</summary>
         </member>
         <member name="F:WCF_TaskOrganizer.Fakes.StubITaskOrganizer.ConnectToDb">
             <summary>Задает stub ITaskOrganizer.ConnectToDb()</summary>
@@ -286,11 +400,17 @@
         <member name="F:WCF_TaskOrganizer.Fakes.StubITaskOrganizer.SaveChangesToDbListOfTask">
             <summary>Задает stub ITaskOrganizer.SaveChangesToDb(List`1&lt;Task&gt; task)</summary>
         </member>
-        <member name="F:WCF_TaskOrganizer.Fakes.StubITaskOrganizer.SelectAllFromDb">
-            <summary>Задает stub ITaskOrganizer.SelectAllFromDb()</summary>
+        <member name="F:WCF_TaskOrganizer.Fakes.StubITaskOrganizer.SelectAllFromDbString">
+            <summary>Задает stub ITaskOrganizer.SelectAllFromDb(String userLogin)</summary>
         </member>
         <member name="M:WCF_TaskOrganizer.Fakes.StubITaskOrganizer.WCF_TaskOrganizer#ITaskOrganizer#AddRowsToDb(WCF_TaskOrganizer.Task)">
             <summary>Задает заглушка ITaskOrganizer.AddRowsToDb(Task task)</summary>
+        </member>
+        <member name="M:WCF_TaskOrganizer.Fakes.StubITaskOrganizer.WCF_TaskOrganizer#ITaskOrganizer#AddUser(TaskOrganizer.User)">
+            <summary>Задает заглушка ITaskOrganizer.AddUser(User user)</summary>
+        </member>
+        <member name="M:WCF_TaskOrganizer.Fakes.StubITaskOrganizer.WCF_TaskOrganizer#ITaskOrganizer#ConfirmUser(TaskOrganizer.User)">
+            <summary>Задает заглушка ITaskOrganizer.ConfirmUser(User user)</summary>
         </member>
         <member name="M:WCF_TaskOrganizer.Fakes.StubITaskOrganizer.WCF_TaskOrganizer#ITaskOrganizer#ConnectToDb">
             <summary>Задает заглушка ITaskOrganizer.ConnectToDb()</summary>
@@ -304,8 +424,8 @@
         <member name="M:WCF_TaskOrganizer.Fakes.StubITaskOrganizer.WCF_TaskOrganizer#ITaskOrganizer#SaveChangesToDb(System.Collections.Generic.List{WCF_TaskOrganizer.Task})">
             <summary>Задает заглушка ITaskOrganizer.SaveChangesToDb(List`1&lt;Task&gt; task)</summary>
         </member>
-        <member name="M:WCF_TaskOrganizer.Fakes.StubITaskOrganizer.WCF_TaskOrganizer#ITaskOrganizer#SelectAllFromDb">
-            <summary>Задает заглушка ITaskOrganizer.SelectAllFromDb()</summary>
+        <member name="M:WCF_TaskOrganizer.Fakes.StubITaskOrganizer.WCF_TaskOrganizer#ITaskOrganizer#SelectAllFromDb(System.String)">
+            <summary>Задает заглушка ITaskOrganizer.SelectAllFromDb(String userLogin)</summary>
         </member>
         <member name="T:WCF_TaskOrganizer.Fakes.StubTask">
             <summary>Тип заглушки WCF_TaskOrganizer.Task</summary>
@@ -313,7 +433,7 @@
         <member name="M:WCF_TaskOrganizer.Fakes.StubTask.#ctor">
             <summary>Инициализирует новый экземпляр</summary>
         </member>
-        <member name="M:WCF_TaskOrganizer.Fakes.StubTask.#ctor(System.String,System.String,System.Boolean,System.Int32,System.Int32,System.Int32)">
+        <member name="M:WCF_TaskOrganizer.Fakes.StubTask.#ctor(System.String,System.String,System.String,System.Boolean,System.Int32,System.Int32,System.Int32)">
             <summary>Инициализирует новый экземпляр</summary>
         </member>
         <member name="M:WCF_TaskOrganizer.Fakes.StubTask.#ctor(System.Int32,System.String,System.String,System.Boolean,System.Int32,System.Int32,System.Int32)">

@@ -41,6 +41,8 @@
             this.texBoxTableName = new System.Windows.Forms.TextBox();
             this.butSaveConnectDatabaseName = new System.Windows.Forms.Button();
             this.teBoxDatabeseName = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.textBoxDatabaseTableUserName = new System.Windows.Forms.TextBox();
             this.grBoxIPandPort.SuspendLayout();
             this.grBoxConnectDatabaseName.SuspendLayout();
             this.SuspendLayout();
@@ -48,10 +50,10 @@
             // textBoxStatus
             // 
             this.textBoxStatus.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textBoxStatus.Location = new System.Drawing.Point(10, 220);
+            this.textBoxStatus.Location = new System.Drawing.Point(287, 12);
             this.textBoxStatus.Name = "textBoxStatus";
             this.textBoxStatus.ReadOnly = true;
-            this.textBoxStatus.Size = new System.Drawing.Size(272, 96);
+            this.textBoxStatus.Size = new System.Drawing.Size(241, 272);
             this.textBoxStatus.TabIndex = 1;
             this.textBoxStatus.Text = "";
             // 
@@ -99,6 +101,8 @@
             // 
             // grBoxConnectDatabaseName
             // 
+            this.grBoxConnectDatabaseName.Controls.Add(this.textBoxDatabaseTableUserName);
+            this.grBoxConnectDatabaseName.Controls.Add(this.label4);
             this.grBoxConnectDatabaseName.Controls.Add(this.textBoxServerName);
             this.grBoxConnectDatabaseName.Controls.Add(this.label3);
             this.grBoxConnectDatabaseName.Controls.Add(this.label2);
@@ -108,7 +112,7 @@
             this.grBoxConnectDatabaseName.Controls.Add(this.teBoxDatabeseName);
             this.grBoxConnectDatabaseName.Location = new System.Drawing.Point(10, 84);
             this.grBoxConnectDatabaseName.Name = "grBoxConnectDatabaseName";
-            this.grBoxConnectDatabaseName.Size = new System.Drawing.Size(271, 130);
+            this.grBoxConnectDatabaseName.Size = new System.Drawing.Size(271, 200);
             this.grBoxConnectDatabaseName.TabIndex = 8;
             this.grBoxConnectDatabaseName.TabStop = false;
             this.grBoxConnectDatabaseName.Text = "Connect database";
@@ -117,7 +121,7 @@
             // 
             this.textBoxServerName.Location = new System.Drawing.Point(9, 29);
             this.textBoxServerName.Name = "textBoxServerName";
-            this.textBoxServerName.Size = new System.Drawing.Size(169, 20);
+            this.textBoxServerName.Size = new System.Drawing.Size(256, 20);
             this.textBoxServerName.TabIndex = 14;
             this.textBoxServerName.Text = "SQLEXPRESS";
             // 
@@ -152,15 +156,15 @@
             // 
             this.texBoxTableName.Location = new System.Drawing.Point(9, 100);
             this.texBoxTableName.Name = "texBoxTableName";
-            this.texBoxTableName.Size = new System.Drawing.Size(169, 20);
+            this.texBoxTableName.Size = new System.Drawing.Size(256, 20);
             this.texBoxTableName.TabIndex = 10;
             this.texBoxTableName.Text = "TableTaskOrganizer";
             // 
             // butSaveConnectDatabaseName
             // 
-            this.butSaveConnectDatabaseName.Location = new System.Drawing.Point(184, 29);
+            this.butSaveConnectDatabaseName.Location = new System.Drawing.Point(97, 162);
             this.butSaveConnectDatabaseName.Name = "butSaveConnectDatabaseName";
-            this.butSaveConnectDatabaseName.Size = new System.Drawing.Size(81, 91);
+            this.butSaveConnectDatabaseName.Size = new System.Drawing.Size(81, 30);
             this.butSaveConnectDatabaseName.TabIndex = 9;
             this.butSaveConnectDatabaseName.Text = "Save";
             this.butSaveConnectDatabaseName.UseVisualStyleBackColor = true;
@@ -170,15 +174,32 @@
             // 
             this.teBoxDatabeseName.Location = new System.Drawing.Point(9, 64);
             this.teBoxDatabeseName.Name = "teBoxDatabeseName";
-            this.teBoxDatabeseName.Size = new System.Drawing.Size(169, 20);
+            this.teBoxDatabeseName.Size = new System.Drawing.Size(256, 20);
             this.teBoxDatabeseName.TabIndex = 8;
             this.teBoxDatabeseName.Text = "DbTaskOrganizer";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(9, 123);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(137, 13);
+            this.label4.TabIndex = 15;
+            this.label4.Text = "Database Table User name";
+            // 
+            // textBoxDatabaseTableUserName
+            // 
+            this.textBoxDatabaseTableUserName.Location = new System.Drawing.Point(9, 136);
+            this.textBoxDatabaseTableUserName.Name = "textBoxDatabaseTableUserName";
+            this.textBoxDatabaseTableUserName.Size = new System.Drawing.Size(256, 20);
+            this.textBoxDatabaseTableUserName.TabIndex = 16;
+            this.textBoxDatabaseTableUserName.Text = "TableUsersTaskOrganizer";
             // 
             // HostTaskOrganizer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(290, 325);
+            this.ClientSize = new System.Drawing.Size(537, 294);
             this.Controls.Add(this.grBoxConnectDatabaseName);
             this.Controls.Add(this.grBoxIPandPort);
             this.Controls.Add(this.textBoxStatus);
@@ -208,6 +229,8 @@
         private System.Windows.Forms.TextBox textBoxServerName;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox textBoxDatabaseTableUserName;
+        private System.Windows.Forms.Label label4;
     }
 }
 

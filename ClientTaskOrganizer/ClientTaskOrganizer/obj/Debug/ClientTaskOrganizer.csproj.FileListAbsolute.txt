@@ -34,3 +34,4 @@ E:\GitHub\TaskOrganizer\ClientTaskOrganizer\ClientTaskOrganizer\obj\Debug\Client
 E:\GitHub\TaskOrganizer\ClientTaskOrganizer\ClientTaskOrganizer\obj\Debug\ClientTaskOrganizer.exe
 E:\GitHub\TaskOrganizer\ClientTaskOrganizer\ClientTaskOrganizer\obj\Debug\ClientTaskOrganizer.pdb
 E:\GitHub\TaskOrganizer\ClientTaskOrganizer\ClientTaskOrganizer\obj\Debug\ClientTaskOrganizer.csprojResolveAssemblyReference.cache
+E:\GitHub\TaskOrganizer\ClientTaskOrganizer\ClientTaskOrganizer\obj\Debug\ClientTaskOrganizer.FormLoginUser.resources

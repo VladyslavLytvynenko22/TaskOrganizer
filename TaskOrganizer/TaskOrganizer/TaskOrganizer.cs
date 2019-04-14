@@ -5,9 +5,19 @@ namespace WCF_TaskOrganizer
 {
     public class WCF_TaskOrganizer : ITaskOrganizer
     {
+        public bool AddUser(User user)
+        {
+            return ClassUser.RegistrationUser(user);
+        }
+
         void ITaskOrganizer.AddRowsToDb(Task task)
         {
             Database.AddRowsToDb(task);
+        }
+
+        bool ITaskOrganizer.ConfirmUser(User user)
+        {
+            return ClassUser.ConfirmUser(user);
         }
 
         bool ITaskOrganizer.ConnectToDb()
@@ -30,9 +40,9 @@ namespace WCF_TaskOrganizer
             Database.SaveChangesToDb(task);
         }
 
-        List<Task> ITaskOrganizer.SelectAllFromDb()
+        List<Task> ITaskOrganizer.SelectAllFromDb(string userLogin)
         {
-            return Database.SelectAllFromDb();
+            return Database.SelectAllFromDb(userLogin);
         }
     }
 }

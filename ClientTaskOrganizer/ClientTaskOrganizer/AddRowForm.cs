@@ -19,12 +19,11 @@ namespace ClientTaskOrganizer
 
         public void butOk_Click(object sender, EventArgs e)
         {
-            //DataGridView dataGridView = dataGridView1;
-            //DataGridViewRow dataGridViewRow = dataGridView1.Rows[0];
             if (WorkWithDataGridView.CheckDataGridViewRow(dataGridView1))//якщо заповнено правильно
             {
 
                 Task task = new Task();//(description, priority, false, year, month, day);
+                task.User = User.userLogin;
                 task.Description = dataGridView1.Rows[0].Cells["Description"].Value.ToString();
                 task.Priority = dataGridView1.Rows[0].Cells["Priority"].Value.ToString();
                 task.Status = false;
@@ -32,7 +31,6 @@ namespace ClientTaskOrganizer
                 task.Month = Convert.ToInt32(dataGridView1.Rows[0].Cells["Month"].Value);
                 task.Day = Convert.ToInt32(dataGridView1.Rows[0].Cells["Day"].Value);
                 WorkWithDatabase.client.AddRowsToDb(task);//віддали данні сервісу
-                //WorkWithDatabase.RefreshdataGridView();
                 this.Close();//форма для додавання рядка вже не потрібна
                 AddRowOK = true;
             }

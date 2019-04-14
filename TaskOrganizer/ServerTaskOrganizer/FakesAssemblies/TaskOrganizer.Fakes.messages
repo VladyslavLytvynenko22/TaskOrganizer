@@ -1,0 +1,7 @@
+E:\GitHub\TaskOrganizer\TaskOrganizer\ServerTaskOrganizer\Fakes\TaskOrganizer.fakes : warning : Невозможно создать заглушку для WCF_TaskOrganizer.Database: тип является запечатанным.
+E:\GitHub\TaskOrganizer\TaskOrganizer\ServerTaskOrganizer\Fakes\TaskOrganizer.fakes : warning : Невозможно создать заглушку для WCF_TaskOrganizer.DatabaseConnection: тип является запечатанным.
+E:\GitHub\TaskOrganizer\TaskOrganizer\ServerTaskOrganizer\Fakes\TaskOrganizer.fakes : warning : Невозможно создать заглушку для TaskOrganizer.ClassUser: тип является запечатанным.
+E:\GitHub\TaskOrganizer\TaskOrganizer\ServerTaskOrganizer\Fakes\TaskOrganizer.fakes : warning : Невозможно создать оболочку совместимости для WCF_TaskOrganizer.Database: тип невидим для exported or assembly(TaskOrganizer.Fakes).
+E:\GitHub\TaskOrganizer\TaskOrganizer\ServerTaskOrganizer\Fakes\TaskOrganizer.fakes : warning : Невозможно создать оболочку совместимости для WCF_TaskOrganizer.DatabaseConnection: тип невидим для exported or assembly(TaskOrganizer.Fakes).
+E:\GitHub\TaskOrganizer\TaskOrganizer\ServerTaskOrganizer\Fakes\TaskOrganizer.fakes : warning : Невозможно создать оболочку совместимости для WCF_TaskOrganizer.ITaskOrganizer: тип является интерфейсом.
+E:\GitHub\TaskOrganizer\TaskOrganizer\ServerTaskOrganizer\Fakes\TaskOrganizer.fakes : warning : Невозможно создать оболочку совместимости для TaskOrganizer.ClassUser: тип невидим для exported or assembly(TaskOrganizer.Fakes).

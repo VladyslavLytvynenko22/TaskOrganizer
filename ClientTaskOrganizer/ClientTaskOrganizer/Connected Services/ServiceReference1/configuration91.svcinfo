@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="/TCicWJAtS794ZIJjBT8nlioEc0=">
+<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="fcuOgAe+aXK3FY11rzaQI0BSN2w=">
   <bindingConfigurations>
     <bindingConfiguration bindingType="basicHttpBinding" name="BasicHttpBinding_ITaskOrganizer">
       <properties>
@@ -112,10 +112,10 @@
     </bindingConfiguration>
   </bindingConfigurations>
   <endpoints>
-    <endpoint name="BasicHttpBinding_ITaskOrganizer" contract="ServiceReference1.ITaskOrganizer" bindingType="basicHttpBinding" address="http://192.168.0.110:1000/WCF_TaskOrganizer" bindingConfiguration="BasicHttpBinding_ITaskOrganizer">
+    <endpoint name="BasicHttpBinding_ITaskOrganizer" contract="ServiceReference1.ITaskOrganizer" bindingType="basicHttpBinding" address="http://192.168.1.4:1000/WCF_TaskOrganizer" bindingConfiguration="BasicHttpBinding_ITaskOrganizer">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>http://192.168.0.110:1000/WCF_TaskOrganizer</serializedValue>
+          <serializedValue>http://192.168.1.4:1000/WCF_TaskOrganizer</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />

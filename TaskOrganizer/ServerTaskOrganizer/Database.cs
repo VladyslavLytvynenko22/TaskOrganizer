@@ -14,6 +14,7 @@ namespace ServerTaskOrganizer
                 sw.WriteLine(configConnectDatabase.nameServer);
                 sw.WriteLine(configConnectDatabase.nameDatabase);
                 sw.WriteLine(configConnectDatabase.nameTableDatabase);
+                sw.WriteLine(configConnectDatabase.nameTableUserDatabase);
             }
             return true;
         }

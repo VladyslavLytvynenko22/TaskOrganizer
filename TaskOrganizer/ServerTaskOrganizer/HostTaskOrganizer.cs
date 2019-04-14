@@ -41,7 +41,7 @@ namespace ServerTaskOrganizer
 
         private void butSaveConnectDatabaseName_Click(object sender, EventArgs e)//зберігаємо налаштування підключення до БД
         {
-            ConfigConnectDatabase configConnectDatabase = new ConfigConnectDatabase(textBoxServerName.Text, teBoxDatabeseName.Text, texBoxTableName.Text);
+            ConfigConnectDatabase configConnectDatabase = new ConfigConnectDatabase(textBoxServerName.Text, teBoxDatabeseName.Text, texBoxTableName.Text, textBoxDatabaseTableUserName.Text);
             Database.SaveConfigConnectDatabase(configConnectDatabase);
         }
     }

@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Data;
 using System.Data.SqlClient;
 using System.IO;
 using System.Net;
@@ -20,6 +19,7 @@ namespace WCF_TaskOrganizer
                 configConnectDatabase.nameServer = sw.ReadLine();
                 configConnectDatabase.nameDatabase = sw.ReadLine();
                 configConnectDatabase.nameTableDatabase = sw.ReadLine();
+                configConnectDatabase.nameTableUserDatabase = sw.ReadLine();
             }
 
             return true;

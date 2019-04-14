@@ -64,6 +64,12 @@
     <Compile Include="ConnectToServerForm.Designer.cs">
       <DependentUpon>ConnectToServerForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormLoginUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLoginUser.Designer.cs">
+      <DependentUpon>FormLoginUser.cs</DependentUpon>
+    </Compile>
     <Compile Include="User.cs" />
     <Compile Include="WorkWithDatabase.cs" />
     <Compile Include="WorkWithDataGridView.cs" />
@@ -83,6 +89,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ClientTaskOrganizer.resx">
       <DependentUpon>ClientTaskOrganizer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLoginUser.resx">
+      <DependentUpon>FormLoginUser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -104,6 +113,9 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\ServiceReference1\item2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ServiceReference1\item3.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\ServiceReference1\WCF_TaskOrganizer.wsdl" />

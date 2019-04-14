@@ -14,6 +14,7 @@ namespace ClientTaskOrganizer
             for (int i = 0; i < DataGridView1.RowCount; i++)
             {
                 task.Id = Convert.ToInt32(DataGridView1.Rows[i].Cells["Id"].Value);
+                task.User = User.userLogin;
                 task.Description = DataGridView1.Rows[i].Cells["Description"].Value.ToString();
                 task.Priority = DataGridView1.Rows[i].Cells["Priority"].Value.ToString();
                 task.Status = Convert.ToBoolean(DataGridView1.Rows[i].Cells["Status"].Value);

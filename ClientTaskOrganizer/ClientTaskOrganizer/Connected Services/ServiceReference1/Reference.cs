@@ -41,6 +41,9 @@ namespace ClientTaskOrganizer.ServiceReference1 {
         private bool StatusField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string UserField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int YearField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
@@ -132,6 +135,19 @@ namespace ClientTaskOrganizer.ServiceReference1 {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
+        public string User {
+            get {
+                return this.UserField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.UserField, value) != true)) {
+                    this.UserField = value;
+                    this.RaisePropertyChanged("User");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
         public int Year {
             get {
                 return this.YearField;
@@ -154,15 +170,76 @@ namespace ClientTaskOrganizer.ServiceReference1 {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="User", Namespace="http://schemas.datacontract.org/2004/07/TaskOrganizer")]
+    [System.SerializableAttribute()]
+    public partial class User : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string UserLoginField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string UserPasswordField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string UserLogin {
+            get {
+                return this.UserLoginField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.UserLoginField, value) != true)) {
+                    this.UserLoginField = value;
+                    this.RaisePropertyChanged("UserLogin");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string UserPassword {
+            get {
+                return this.UserPasswordField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.UserPasswordField, value) != true)) {
+                    this.UserPasswordField = value;
+                    this.RaisePropertyChanged("UserPassword");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ServiceReference1.ITaskOrganizer")]
     public interface ITaskOrganizer {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITaskOrganizer/SelectAllFromDb", ReplyAction="http://tempuri.org/ITaskOrganizer/SelectAllFromDbResponse")]
-        ClientTaskOrganizer.ServiceReference1.Task[] SelectAllFromDb();
+        ClientTaskOrganizer.ServiceReference1.Task[] SelectAllFromDb(string userLogin);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITaskOrganizer/SelectAllFromDb", ReplyAction="http://tempuri.org/ITaskOrganizer/SelectAllFromDbResponse")]
-        System.Threading.Tasks.Task<ClientTaskOrganizer.ServiceReference1.Task[]> SelectAllFromDbAsync();
+        System.Threading.Tasks.Task<ClientTaskOrganizer.ServiceReference1.Task[]> SelectAllFromDbAsync(string userLogin);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITaskOrganizer/ConnectToDb", ReplyAction="http://tempuri.org/ITaskOrganizer/ConnectToDbResponse")]
         bool ConnectToDb();
@@ -193,6 +270,18 @@ namespace ClientTaskOrganizer.ServiceReference1 {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITaskOrganizer/SaveChangesToDb", ReplyAction="http://tempuri.org/ITaskOrganizer/SaveChangesToDbResponse")]
         System.Threading.Tasks.Task SaveChangesToDbAsync(ClientTaskOrganizer.ServiceReference1.Task[] task);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITaskOrganizer/ConfirmUser", ReplyAction="http://tempuri.org/ITaskOrganizer/ConfirmUserResponse")]
+        bool ConfirmUser(ClientTaskOrganizer.ServiceReference1.User user);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITaskOrganizer/ConfirmUser", ReplyAction="http://tempuri.org/ITaskOrganizer/ConfirmUserResponse")]
+        System.Threading.Tasks.Task<bool> ConfirmUserAsync(ClientTaskOrganizer.ServiceReference1.User user);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITaskOrganizer/AddUser", ReplyAction="http://tempuri.org/ITaskOrganizer/AddUserResponse")]
+        bool AddUser(ClientTaskOrganizer.ServiceReference1.User user);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITaskOrganizer/AddUser", ReplyAction="http://tempuri.org/ITaskOrganizer/AddUserResponse")]
+        System.Threading.Tasks.Task<bool> AddUserAsync(ClientTaskOrganizer.ServiceReference1.User user);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -222,12 +311,12 @@ namespace ClientTaskOrganizer.ServiceReference1 {
                 base(binding, remoteAddress) {
         }
         
-        public ClientTaskOrganizer.ServiceReference1.Task[] SelectAllFromDb() {
-            return base.Channel.SelectAllFromDb();
+        public ClientTaskOrganizer.ServiceReference1.Task[] SelectAllFromDb(string userLogin) {
+            return base.Channel.SelectAllFromDb(userLogin);
         }
         
-        public System.Threading.Tasks.Task<ClientTaskOrganizer.ServiceReference1.Task[]> SelectAllFromDbAsync() {
-            return base.Channel.SelectAllFromDbAsync();
+        public System.Threading.Tasks.Task<ClientTaskOrganizer.ServiceReference1.Task[]> SelectAllFromDbAsync(string userLogin) {
+            return base.Channel.SelectAllFromDbAsync(userLogin);
         }
         
         public bool ConnectToDb() {
@@ -268,6 +357,22 @@ namespace ClientTaskOrganizer.ServiceReference1 {
         
         public System.Threading.Tasks.Task SaveChangesToDbAsync(ClientTaskOrganizer.ServiceReference1.Task[] task) {
             return base.Channel.SaveChangesToDbAsync(task);
+        }
+        
+        public bool ConfirmUser(ClientTaskOrganizer.ServiceReference1.User user) {
+            return base.Channel.ConfirmUser(user);
+        }
+        
+        public System.Threading.Tasks.Task<bool> ConfirmUserAsync(ClientTaskOrganizer.ServiceReference1.User user) {
+            return base.Channel.ConfirmUserAsync(user);
+        }
+        
+        public bool AddUser(ClientTaskOrganizer.ServiceReference1.User user) {
+            return base.Channel.AddUser(user);
+        }
+        
+        public System.Threading.Tasks.Task<bool> AddUserAsync(ClientTaskOrganizer.ServiceReference1.User user) {
+            return base.Channel.AddUserAsync(user);
         }
     }
 }

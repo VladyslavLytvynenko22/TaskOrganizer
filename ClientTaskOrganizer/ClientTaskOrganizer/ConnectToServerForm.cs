@@ -22,8 +22,9 @@ namespace ClientTaskOrganizer
                     WorkWithDatabase.client = new TaskOrganizerClient("BasicHttpBinding_ITaskOrganizer");
                     EndpointAddress endpointAddress = new EndpointAddress($"http://{txtBxIP.Text}:{txtBxPort.Text}//WCF_TaskOrganizer");
                     WorkWithDatabase.client.Endpoint.Address = endpointAddress;
-                    WorkWithDatabase.client.SelectAllFromDb();//перевіримо чи можна вибрати дані
-                    //WorkWithDatabase.SelectAllToDataGridView(DataGridView1);//вибираємо всі дані
+                    WorkWithDatabase.client.SelectAllFromDb(User.userLogin);//перевіримо чи можна вибрати дані
+                    FormLoginUser formLoginUser = new FormLoginUser();
+                    formLoginUser.ShowDialog();
                     this.Close();//закриваємо форму для підключення
                     ConnectOK = true;
                 }

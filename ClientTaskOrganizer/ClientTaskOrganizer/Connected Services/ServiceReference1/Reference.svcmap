@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="62832e8b-00a3-4d7c-98a0-e9943644eca7" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="86db510f-312c-42f5-98cd-63f8b946e736" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -22,11 +22,12 @@
     <MetadataSource Address="http://localhost:1000/" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="item.disco" MetadataType="Disco" ID="7643dd79-0014-4b89-85ba-e552b23173c0" SourceId="1" SourceUrl="http://192.168.0.110:1000/?disco" />
-    <MetadataFile FileName="WCF_TaskOrganizer.wsdl" MetadataType="Wsdl" ID="3a29987b-946b-4e6c-a16d-18172265cf50" SourceId="1" SourceUrl="http://192.168.0.110:1000/?wsdl" />
-    <MetadataFile FileName="item.xsd" MetadataType="Schema" ID="1455c9fc-7e1d-46ca-904c-b2248b5a4889" SourceId="1" SourceUrl="http://192.168.0.110:1000/?xsd=xsd0" />
-    <MetadataFile FileName="item1.xsd" MetadataType="Schema" ID="50864623-d170-4c45-888d-5cb34b1d2dc2" SourceId="1" SourceUrl="http://192.168.0.110:1000/?xsd=xsd1" />
-    <MetadataFile FileName="item2.xsd" MetadataType="Schema" ID="f0e2aea8-25c9-4b9f-9d49-6268778192d5" SourceId="1" SourceUrl="http://192.168.0.110:1000/?xsd=xsd2" />
+    <MetadataFile FileName="item.disco" MetadataType="Disco" ID="481138ef-5d93-4656-bacb-56f54cf68fb0" SourceId="1" SourceUrl="http://192.168.1.4:1000/?disco" />
+    <MetadataFile FileName="item.xsd" MetadataType="Schema" ID="37e442ee-a7b3-4d10-b6b8-db85bdc6d817" SourceId="1" SourceUrl="http://192.168.1.4:1000/?xsd=xsd0" />
+    <MetadataFile FileName="item1.xsd" MetadataType="Schema" ID="245bde60-a1e1-434c-8449-7e9e26d49099" SourceId="1" SourceUrl="http://192.168.1.4:1000/?xsd=xsd1" />
+    <MetadataFile FileName="item2.xsd" MetadataType="Schema" ID="7ff689d9-9387-46d6-b439-dd46a032ec6f" SourceId="1" SourceUrl="http://192.168.1.4:1000/?xsd=xsd2" />
+    <MetadataFile FileName="item3.xsd" MetadataType="Schema" ID="9e042a88-0a75-49e1-9a61-7b7f85e335b1" SourceId="1" SourceUrl="http://192.168.1.4:1000/?xsd=xsd3" />
+    <MetadataFile FileName="WCF_TaskOrganizer.wsdl" MetadataType="Wsdl" ID="9095f1e8-a9e7-4058-b0b2-3428c869a585" SourceId="1" SourceUrl="http://192.168.1.4:1000/?wsdl" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

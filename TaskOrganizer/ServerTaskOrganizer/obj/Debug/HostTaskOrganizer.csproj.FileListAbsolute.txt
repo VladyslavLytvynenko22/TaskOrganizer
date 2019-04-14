@@ -1,7 +1,6 @@
 E:\GitHub\TaskOrganizer\TaskOrganizer\ServerTaskOrganizer\bin\Debug\ServerTaskOrganizer.exe.config
 E:\GitHub\TaskOrganizer\TaskOrganizer\ServerTaskOrganizer\bin\Debug\ServerTaskOrganizer.exe
 E:\GitHub\TaskOrganizer\TaskOrganizer\ServerTaskOrganizer\bin\Debug\ServerTaskOrganizer.pdb
-E:\GitHub\TaskOrganizer\TaskOrganizer\ServerTaskOrganizer\obj\Debug\HostTaskOrganizer.csprojResolveAssemblyReference.cache
 E:\GitHub\TaskOrganizer\TaskOrganizer\ServerTaskOrganizer\obj\Debug\ServerTaskOrganizer.HostTaskOrganizer.resources
 E:\GitHub\TaskOrganizer\TaskOrganizer\ServerTaskOrganizer\obj\Debug\ServerTaskOrganizer.Properties.Resources.resources
 E:\GitHub\TaskOrganizer\TaskOrganizer\ServerTaskOrganizer\obj\Debug\HostTaskOrganizer.csproj.GenerateResource.Cache
@@ -37,3 +36,4 @@ E:\GitHub\TaskOrganizer\TaskOrganizer\ServerTaskOrganizer\obj\Debug\Fakes\to\o\f
 E:\GitHub\TaskOrganizer\TaskOrganizer\ServerTaskOrganizer\obj\Debug\Fakes\to\o\TaskOrganizer.Fakes.dll
 E:\GitHub\TaskOrganizer\TaskOrganizer\ServerTaskOrganizer\obj\Debug\Fakes\to\o\TaskOrganizer.Fakes.pdb
 E:\GitHub\TaskOrganizer\TaskOrganizer\ServerTaskOrganizer\bin\Debug\TaskOrganizer.Fakes.fakesconfig
+E:\GitHub\TaskOrganizer\TaskOrganizer\ServerTaskOrganizer\obj\Debug\HostTaskOrganizer.csprojResolveAssemblyReference.cache

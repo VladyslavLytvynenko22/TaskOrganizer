@@ -105,7 +105,7 @@
             this.txtBxIP.Name = "txtBxIP";
             this.txtBxIP.Size = new System.Drawing.Size(86, 20);
             this.txtBxIP.TabIndex = 6;
-            this.txtBxIP.Text = "192.168.0.110";
+            this.txtBxIP.Text = "192.168.56.1";
             // 
             // label1
             // 

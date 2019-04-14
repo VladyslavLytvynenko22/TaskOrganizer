@@ -3,6 +3,7 @@
     public class Task
     {
         public int Id { get; set; }
+        public string User { get; set; }
         public string Description { get; set; }
         public string Priority { get; set; }
         public bool Status { get; set; }
@@ -21,8 +22,9 @@
             this.Month = Month;
             this.Day = Day;
         }
-        public Task(string Description, string Priority, bool Status, int Year, int Month, int Day)
+        public Task(string User, string Description, string Priority, bool Status, int Year, int Month, int Day)
         {
+            this.User = User;
             this.Description = Description;
             this.Priority = Priority;
             this.Status = Status;
